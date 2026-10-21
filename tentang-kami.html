@@ -128,25 +128,29 @@
     <!-- ========================================== -->
     <!-- 2. SECTION TENTANG KAMI & MASTER PLAN (Matching Homepage Container) -->
     <!-- ========================================== -->
-    <section class="py-14 sm:py-20 lg:py-24 bg-white">
-      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 space-y-8 sm:space-y-10">
+    <section class="py-12 sm:py-20 lg:py-24 bg-white">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 xl:px-16 space-y-8 sm:space-y-10">
 
         <!-- Section Title: Tentang Kami -->
-        <div>
+        <div class="reveal">
+          <span class="text-xs font-bold uppercase tracking-wider text-batara-lime bg-batara-dark px-3 py-1 rounded-full mb-2 inline-flex items-center gap-1.5 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-batara-lime pulse-live"></span>
+            Profil Kawasan
+          </span>
           <h2 class="font-syne font-bold text-3xl sm:text-4xl md:text-5xl text-batara-dark tracking-tight">
             Tentang Kami
           </h2>
         </div>
 
         <!-- Two Logos Side-by-Side: Badak Perkasa Group & PT. Tri Indobangun Perkasa -->
-        <div class="py-3 flex justify-center">
+        <div class="py-3 flex justify-center reveal">
           <img src="assets/tentang_kami_images/logos_bpg_tip_pair.webp"
             alt="Badak Perkasa Group — Developing for People & PT. Tri Indobangun Perkasa"
-            class="w-full max-w-[700px] h-auto object-contain block">
+            class="w-full max-w-[700px] h-auto object-contain block hover:scale-[1.01] transition-transform">
         </div>
 
         <!-- First Narrative Paragraph (Single crisp occurrence) -->
-        <div class="text-gray-800 font-poppins text-base sm:text-lg leading-relaxed">
+        <div class="text-gray-800 font-poppins text-base sm:text-lg leading-relaxed reveal">
           <p>
             Batara Parkview merupakan proyek ke-5 yang dikembangkan oleh Badak Perkasa Group melalui PT. Tri Indobangun
             Perkasa yang mengusung konsep hunian hijau mandiri dengan konsep rumah tumbuh yang direncanakan terdiri dari
@@ -155,16 +159,16 @@
         </div>
 
         <!-- Site Master Plan Graphic (Clean version without duplicate baked text) -->
-        <div class="my-6">
+        <div class="my-6 reveal">
           <picture>
             <source srcset="assets/tentang_kami_images/site-master-plan-clean.webp" type="image/webp">
             <img src="assets/tentang_kami_images/site-master-plan-clean.png"
-              alt="Site Master Plan Kawasan Batara Parkview" class="w-full h-auto object-contain block" loading="lazy">
+              alt="Site Master Plan Kawasan Batara Parkview" class="w-full h-auto object-contain block rounded-2xl shadow-sm hover:shadow-md transition-shadow" loading="lazy">
           </picture>
         </div>
 
         <!-- Narrative Block (5 Paragraphs matching Screenshot 1) -->
-        <div class="space-y-6 text-[#333333] font-poppins text-base sm:text-lg leading-relaxed pt-2">
+        <div class="space-y-6 text-[#333333] font-poppins text-base sm:text-lg leading-relaxed pt-2 reveal">
           <p>
             Kebutuhan akan hunian yang terjangkau sekaligus terhubung dengan transportasi publik kini menjadi prioritas,
             khususnya bagi generasi Millenial dan Generasi Z. Menjawab kebutuhan tersebut, Batara Parkview hadir sebagai
@@ -201,15 +205,15 @@
     <!-- ========================================== -->
     <!-- 3. SECTION KEUNGGULAN (Sage Background #eaefeb) -->
     <!-- ========================================== -->
-    <section class="py-16 sm:py-24 bg-[#eaefeb]">
-      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 space-y-10 sm:space-y-12">
+    <section class="py-12 sm:py-20 lg:py-24 bg-[#eaefeb]">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-14 xl:px-16 space-y-8 sm:space-y-12">
 
         <!-- Title & Intro Text -->
-        <div class="space-y-4">
+        <div class="space-y-4 reveal">
           <h2 class="font-syne font-bold text-3xl sm:text-4xl md:text-5xl text-batara-dark tracking-tight">
             Keunggulan
           </h2>
-          <p class="font-poppins text-gray-800 text-base sm:text-lg leading-relaxed max-w-4xl">
+          <p class="font-poppins text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed max-w-4xl">
             Kami percaya bahwa di dunia ini tidak ada yang sempurna, namun di balik itu project ini memiliki beberapa
             keunggulan yang layak dan perlu dipertimbangkan dalam memilih hunian terjangkau dengan akses transportasi
             publik yang mudah serta fasilitas umum penunjang hingga menggunakan bahan bangunan yang terbaik.
@@ -217,7 +221,7 @@
         </div>
 
         <!-- 8 Keunggulan Cards Grid (4 Columns x 2 Rows) -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-6 sm:gap-x-8 pt-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-y-8 sm:gap-y-10 gap-x-4 sm:gap-x-8 pt-4 reveal stagger-children">
 
           <!-- Item 1: Cukup Jalan Kaki ke Stasiun Cikoya -->
           <div class="flex flex-col items-center text-center">
