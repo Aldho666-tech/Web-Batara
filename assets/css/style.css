@@ -649,11 +649,11 @@ input:focus, textarea:focus, select:focus {
 
   /* Adjust floating WA button position above bottom nav on mobile */
   .wa-floating-btn-container {
-    bottom: 88px !important;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px) !important;
   }
 
   #backToTopBtn {
-    bottom: 88px !important;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 78px) !important;
   }
 }
 
@@ -871,4 +871,61 @@ input:focus, textarea:focus, select:focus {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* ==========================================================================
+   TIPE RUMAH REDESIGN (Editorial Minimalist Architecture)
+   ========================================================================== */
+.tipe-unit-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(21, 49, 30, 0.08);
+}
+
+.tipe-unit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(21, 49, 30, 0.08);
+  border-color: rgba(134, 207, 94, 0.35);
+}
+
+.spec-toggle-arrow {
+  transition: transform 0.25s ease;
+}
+
+.feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #f4f6f4;
+  color: #15311e;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(21, 49, 30, 0.06);
+}
+
+.feature-pill svg {
+  color: #1ebd5a;
+  flex-shrink: 0;
+}
+
+/* Comparison Matrix Table */
+.matrix-table th {
+  background-color: #15311e;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.matrix-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #edf2ee;
+}
+
+.matrix-table tr:hover td {
+  background-color: #f7faf7;
 }

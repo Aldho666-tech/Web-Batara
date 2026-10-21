@@ -279,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openWaPopover();
       }
     }
+    window.toggleWaPopover = toggleWaPopover;
 
     waBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -523,5 +524,94 @@ document.addEventListener('DOMContentLoaded', () => {
     window.updateKprCalc();
   }
 });
+
+// ==========================================
+// Tipe Rumah Interactive Features
+// ==========================================
+window.switchUnitView = function(unitId, viewType) {
+  const card = document.getElementById(unitId);
+  if (!card) return;
+  const fasadImg = card.querySelector('.unit-fasad-container');
+  const denahImg = card.querySelector('.unit-denah-container');
+  const fasadBtn = card.querySelector('.btn-view-fasad');
+  const denahBtn = card.querySelector('.btn-view-denah');
+
+  if (viewType === 'fasad') {
+    if (fasadImg) fasadImg.classList.remove('hidden');
+    if (denahImg) denahImg.classList.add('hidden');
+    if (fasadBtn) {
+      fasadBtn.classList.add('bg-batara-dark', 'text-white', 'shadow-xs');
+      fasadBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+    }
+    if (denahBtn) {
+      denahBtn.classList.remove('bg-batara-dark', 'text-white', 'shadow-xs');
+      denahBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+    }
+  } else {
+    if (fasadImg) fasadImg.classList.add('hidden');
+    if (denahImg) denahImg.classList.remove('hidden');
+    if (denahBtn) {
+      denahBtn.classList.add('bg-batara-dark', 'text-white', 'shadow-xs');
+      denahBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+    }
+    if (fasadBtn) {
+      fasadBtn.classList.remove('bg-batara-dark', 'text-white', 'shadow-xs');
+      fasadBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+    }
+  }
+};
+
+window.toggleUnitSpecs = function(specId, btn) {
+  const specEl = document.getElementById(specId);
+  if (!specEl) return;
+  const isHidden = specEl.classList.contains('hidden');
+  if (isHidden) {
+    specEl.classList.remove('hidden');
+    if (btn) {
+      const textSpan = btn.querySelector('.spec-toggle-text');
+      const arrowSpan = btn.querySelector('.spec-toggle-arrow');
+      if (textSpan) textSpan.textContent = 'Sembunyikan Spesifikasi Material';
+      if (arrowSpan) arrowSpan.style.transform = 'rotate(180deg)';
+    }
+  } else {
+    specEl.classList.add('hidden');
+    if (btn) {
+      const textSpan = btn.querySelector('.spec-toggle-text');
+      const arrowSpan = btn.querySelector('.spec-toggle-arrow');
+      if (textSpan) textSpan.textContent = 'Lihat 15 Spesifikasi Konstruksi Lengkap';
+      if (arrowSpan) arrowSpan.style.transform = 'rotate(0deg)';
+    }
+  }
+};
+
+window.filterTipeRumah = function(category, btn) {
+  const cards = document.querySelectorAll('.tipe-unit-card');
+  const btns = document.querySelectorAll('.tipe-filter-btn');
+
+  btns.forEach(b => {
+    b.classList.remove('bg-batara-dark', 'text-white', 'shadow-xs');
+    b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+  });
+  if (btn) {
+    btn.classList.add('bg-batara-dark', 'text-white', 'shadow-xs');
+    btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+  }
+
+  cards.forEach(c => {
+    const cardCat = c.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      c.style.display = 'block';
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(12px)';
+      setTimeout(() => {
+        c.style.opacity = '1';
+        c.style.transform = 'translateY(0)';
+      }, 50);
+    } else {
+      c.style.display = 'none';
+    }
+  });
+};
+
 
 

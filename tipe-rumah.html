@@ -69,41 +69,8 @@
         </a>
       </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-batara-dark p-1.5 focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
     </div>
   </header>
-
-  <!-- Mobile Drawer -->
-  <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 hidden flex flex-col justify-end">
-    <div class="bg-white rounded-t-3xl p-6 sm:p-8 space-y-4 shadow-2xl">
-      <div class="flex items-center justify-between pb-4 border-b border-gray-100">
-        <img src="assets/images/logo.svg" alt="Batara Parkview" class="h-9 w-auto">
-        <button id="mobile-menu-close" class="text-gray-500 p-2" aria-label="Close Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <nav class="flex flex-col space-y-3 pt-2">
-        <a href="index.html" class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Home</a>
-        <a href="tentang-kami.html"
-          class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Tentang Kami</a>
-        <a href="tipe-rumah.html" class="text-lg font-syne font-bold text-batara-dark py-2 border-b border-gray-50">Tipe
-          Rumah</a>
-        <a href="artikel.html"
-          class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Artikel</a>
-        <a href="#contact" class="text-lg font-syne font-medium text-gray-700 py-2">Contact</a>
-      </nav>
-      <div class="pt-4">
-        <a href="#contact" class="btn-primary w-full text-center">Hubungi Marketing</a>
-      </div>
-    </div>
-  </div>
 
   <main>
     <!-- ========================================== -->
@@ -122,770 +89,1144 @@
       </div>
     </section>
 
-    <!-- MOBILE-FRIENDLY QUICK JUMP BAR -->
-    <div class="sticky top-[52px] sm:top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-100 py-2.5 sm:py-3 shadow-xs">
-      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 flex items-center gap-2 overflow-x-auto no-scrollbar">
-        <span class="text-[11px] sm:text-xs font-bold text-gray-400 uppercase tracking-wider flex-shrink-0 mr-1 flex items-center gap-1">
-          <svg class="w-3.5 h-3.5 text-batara-lime" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-          </svg>
-          Lompat Tipe:
-        </span>
-        <a href="#kalmia" class="quick-pill">Kalmia 30/60</a>
-        <a href="#krisan" class="quick-pill">Krisan 30/60</a>
-        <a href="#daisy" class="quick-pill">Daisy 30/60</a>
-        <a href="#amarilys" class="quick-pill">Amarilys 30/60</a>
-        <a href="#amarilys-plus" class="quick-pill">Amarilys Plus 30/60</a>
+    <!-- INTERACTIVE CATEGORY FILTER & QUICK JUMP BAR -->
+    <div class="sticky top-[52px] sm:top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200/80 py-3 shadow-xs">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <!-- Category Segmented Filter Tabs -->
+        <div class="flex items-center gap-1.5 p-1 bg-gray-100 rounded-xl flex-shrink-0">
+          <button type="button" onclick="filterTipeRumah('all', this)"
+            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-bold transition-all bg-batara-dark text-white shadow-xs">
+            Semua Unit (5)
+          </button>
+          <button type="button" onclick="filterTipeRumah('subsidi', this)"
+            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-bold transition-all bg-white text-gray-600 border-gray-200 hover:text-batara-dark">
+            Subsidi FLPP (3)
+          </button>
+          <button type="button" onclick="filterTipeRumah('komersil', this)"
+            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-bold transition-all bg-white text-gray-600 border-gray-200 hover:text-batara-dark">
+            Komersil Premium (2)
+          </button>
+        </div>
+
+        <!-- Direct Unit Jump Links -->
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 text-xs font-poppins font-medium">
+          <span class="text-gray-400 text-[11px] uppercase tracking-wider flex-shrink-0 mr-1 hidden lg:inline">Lompat:</span>
+          <a href="#kalmia" class="quick-pill">Kalmia</a>
+          <a href="#krisan" class="quick-pill">Krisan</a>
+          <a href="#daisy" class="quick-pill">Daisy</a>
+          <a href="#amarilys" class="quick-pill">Amarilys</a>
+          <a href="#amarilys-plus" class="quick-pill">Amarilys+</a>
+          <a href="#tabel-perbandingan" class="quick-pill bg-emerald-50 text-emerald-800 border-emerald-200 font-semibold">Tabel Komparasi</a>
+        </div>
       </div>
     </div>
 
     <!-- ========================================== -->
-    <!-- 2. SECTION LIST TIPE RUMAH                 -->
+    <!-- 2. SECTION LIST TIPE RUMAH (REDESIGNED)   -->
     <!-- ========================================== -->
     <section class="py-12 sm:py-20 lg:py-24 bg-[#f8faf8]">
-      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 space-y-12 sm:space-y-20">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 space-y-12 sm:space-y-16">
+        
         <!-- Page Title Header -->
-        <div class="border-b border-gray-200 pb-6 flex items-center justify-between flex-wrap gap-4 reveal">
-          <div>
-            <span
-              class="text-xs font-bold uppercase tracking-wider text-batara-lime bg-batara-dark px-3 py-1 rounded-full mb-2 inline-flex items-center gap-1.5 shadow-xs">
-              <span class="w-2 h-2 rounded-full bg-batara-lime pulse-live"></span>
-              Pilihan Unit Ready &amp; Indent
+        <div class="border-b border-gray-200 pb-8 flex items-end justify-between flex-wrap gap-4 reveal">
+          <div class="space-y-2 max-w-xl">
+            <span class="text-xs font-syne font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-3.5 py-1 rounded-full inline-flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Koleksi Unit Hunian TOD
             </span>
-            <h2 class="font-syne font-bold text-2xl sm:text-4xl text-batara-dark tracking-tight">
-              Pilihan Tipe Rumah
+            <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight leading-tight">
+              Pilihan Tipe Rumah Modern Tropis
             </h2>
+            <p class="text-sm font-poppins text-gray-600 leading-relaxed pt-1">
+              Setiap unit dirancang dengan arsitektur pencahayaan alami, plafon tinggi sirkulasi sejuk, dan kemudahan fasilitas transit Stasiun KRL Cikoya.
+            </p>
           </div>
-          <p class="text-xs sm:text-sm font-poppins text-gray-500 max-w-md leading-relaxed">
-            Pilihan hunian subsidi &amp; komersil berkualitas terbaik dengan spesifikasi unggul, tata ruang optimal, dan plafon tinggi untuk sirkulasi udara maksimal.
-          </p>
+          <div class="flex items-center gap-2 text-xs font-poppins text-gray-500 bg-white p-3 rounded-2xl border border-gray-100 shadow-xs">
+            <span class="text-lg">🏡</span>
+            <span><strong>Tipe 30/60</strong> • 2 KT &amp; 1 KM • Carport • Air Bersih Komunal</span>
+          </div>
         </div>
 
-        <!-- 1. KALMIA -->
-        <div id="kalmia"
-          class="bg-white rounded-3xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md border border-gray-100 scroll-mt-28 reveal interactive-card">
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                <!-- Left: Photos & Floor Plan -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="rounded-2xl overflow-hidden shadow-md bg-gray-100">
-                    <img src="assets/images/house-kalmia.jpg" alt="Rumah Tipe Kalmia Batara Parkview"
-                      class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                  </div>
-                  <div
-                    class="bg-[#f9fbf9] p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-center gap-6">
-                    <div
-                      class="w-32 h-44 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-white"
-                      onclick="openDenahModal('assets/images/denah-kalmia.jpg', 'Kalmia')">
-                      <img src="assets/images/denah-kalmia.jpg" alt="Denah Tipe Kalmia"
-                        class="w-full h-full object-contain p-2 hover:scale-110 transition-transform">
-                    </div>
-                    <div class="space-y-2 text-center sm:text-left">
-                      <span
-                        class="text-xs font-semibold text-batara-lime bg-batara-dark px-3 py-1 rounded-full uppercase">Denah
-                        Ruang</span>
-                      <h4 class="font-syne font-bold text-lg text-batara-dark">Tata Ruang Optimal</h4>
-                      <p class="text-xs text-gray-500 font-poppins">Klik denah untuk memperbesar gambar detail ukuran
-                        tiap
-                        ruangan.</p>
-                      <button onclick="openDenahModal('assets/images/denah-kalmia.jpg', 'Kalmia')"
-                        class="text-xs font-syne font-bold text-batara-dark hover:text-batara-lime underline inline-block pt-1">
-                        Lihat Denah Penuh &rarr;
-                      </button>
-                    </div>
-                  </div>
-                  <!-- Amenity Badges -->
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="amenity-tag">1 Kamar Mandi</span>
-                    <span class="amenity-tag">Carport Luas</span>
-                    <span class="amenity-tag">2 Kamar Tidur</span>
-                    <span class="amenity-tag">1 Ruang Tamu</span>
-                    <span class="amenity-tag">Ceiling Tinggi</span>
-                  </div>
-                </div>
-
-                <!-- Right: Title & Specification Table -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="border-b border-gray-100 pb-4 flex items-baseline justify-between flex-wrap gap-4">
-                    <div>
-                      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark">
-                        KALMIA
-                      </h2>
-                      <p class="text-sm font-poppins font-semibold text-gray-500 mt-1">Hunian Modern Nyaman</p>
-                    </div>
-                    <div class="bg-batara-dark text-white px-5 py-2 rounded-2xl text-center">
-                      <span class="font-syne font-bold text-lg text-batara-lime">30 M²</span>
-                      <span class="text-gray-400 mx-1">/</span>
-                      <span class="font-syne font-bold text-lg">60 M²</span>
-                      <div class="text-[10px] text-gray-300 uppercase tracking-widest">LB / LT</div>
-                    </div>
-                  </div>
-
-                  <!-- Spec Table -->
-                  <div class="space-y-3">
-                    <h3 class="font-syne font-bold text-xl text-batara-dark">Spesifikasi Bangunan</h3>
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-left spec-table border border-gray-100 rounded-xl overflow-hidden">
-                        <tbody class="divide-y divide-gray-100">
-                          <tr>
-                            <td class="font-medium text-gray-500 w-1/3">Pondasi</td>
-                            <td class="font-semibold text-batara-dark">Batu Kali</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Struktur</td>
-                            <td class="font-semibold text-batara-dark">Beton Bertulang</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dinding</td>
-                            <td class="font-semibold text-batara-dark">Bata Ringan, Aci &amp; Cat</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Lantai</td>
-                            <td class="font-semibold text-batara-dark">Keramik 40x40 cm</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Rangka Atap</td>
-                            <td class="font-semibold text-batara-dark">Baja Ringan</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Atap</td>
-                            <td class="font-semibold text-batara-dark">Genteng Metal Pasir</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kusen</td>
-                            <td class="font-semibold text-batara-dark">Alumunium</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pintu Utama</td>
-                            <td class="font-semibold text-batara-dark">Double Multiplek</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Plafond</td>
-                            <td class="font-semibold text-batara-dark">Gypsum</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Ruang Tamu</td>
-                            <td class="font-semibold text-batara-dark">Drop Ceiling</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kamar Mandi</td>
-                            <td class="font-semibold text-batara-dark">Keramik 25x25cm, Keramik 40x25cm, PVC + Slot</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Sanitair</td>
-                            <td class="font-semibold text-batara-dark">Closet Jongkok</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Air Bersih</td>
-                            <td class="font-semibold text-batara-dark">Jaringan Air Komunal</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Listrik</td>
-                            <td class="font-semibold text-batara-dark">Kwh 1300 Watt</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Septictank</td>
-                            <td class="font-semibold text-batara-dark">Biotank</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#contact" class="btn-primary text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto">Minta Simulasi Cicilan</a>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Kalmia."
-                      target="_blank" rel="noopener" class="btn-accent btn-shimmer text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto flex items-center justify-center gap-2">
-                      <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                      Tanya Unit via WA
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <!-- =========================================================================
+             1. KALMIA 30/60 (SUBSIDI FLPP)
+             ========================================================================= -->
+        <article id="kalmia" data-category="subsidi"
+          class="tipe-unit-card bg-white rounded-3xl p-6 sm:p-9 lg:p-12 shadow-sm border border-gray-200/70 scroll-mt-28 reveal">
+          
+          <!-- Card Top Bar: Badges & Dimensions -->
+          <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-gray-100">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-syne font-bold rounded-full border border-emerald-200">
+                Subsidi FLPP Pemerintah
+              </span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-poppins font-medium rounded-full">
+                Drop Ceiling Ruang Tamu
+              </span>
             </div>
-
-            <!-- 2. KRISAN -->
-            <div id="krisan"
-              class="bg-white rounded-3xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md border border-gray-100 scroll-mt-28 reveal interactive-card">
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                <!-- Left: Photos & Floor Plan -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="rounded-2xl overflow-hidden shadow-md bg-gray-100">
-                    <img src="assets/img/KRISAN.svg" alt="Rumah Tipe Krisan Batara Parkview"
-                      class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                  </div>
-                  <div
-                    class="bg-[#f9fbf9] p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-center gap-6">
-                    <div
-                      class="w-32 h-44 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-white"
-                      onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Krisan')">
-                      <img src="assets/images/denah-krisan.jpg" alt="Denah Tipe Krisan"
-                        class="w-full h-full object-contain p-2 hover:scale-110 transition-transform">
-                    </div>
-                    <div class="space-y-2 text-center sm:text-left">
-                      <span
-                        class="text-xs font-semibold text-batara-lime bg-batara-dark px-3 py-1 rounded-full uppercase">Denah
-                        Ruang</span>
-                      <h4 class="font-syne font-bold text-lg text-batara-dark">Tata Ruang Optimal</h4>
-                      <p class="text-xs text-gray-500 font-poppins">Klik denah untuk memperbesar gambar detail ukuran
-                        tiap
-                        ruangan.</p>
-                      <button onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Krisan')"
-                        class="text-xs font-syne font-bold text-batara-dark hover:text-batara-lime underline inline-block pt-1">
-                        Lihat Denah Penuh &rarr;
-                      </button>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="amenity-tag">1 Kamar Mandi</span>
-                    <span class="amenity-tag">Carport Luas</span>
-                    <span class="amenity-tag">2 Kamar Tidur</span>
-                    <span class="amenity-tag">1 Ruang Tamu</span>
-                  </div>
-                </div>
-
-                <!-- Right: Title & Specification Table -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="border-b border-gray-100 pb-4 flex items-baseline justify-between flex-wrap gap-4">
-                    <div>
-                      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark">
-                        KRISAN
-                      </h2>
-                      <p class="text-sm font-poppins font-semibold text-gray-500 mt-1">Hunian Praktis &amp; Asri</p>
-                    </div>
-                    <div class="bg-batara-dark text-white px-5 py-2 rounded-2xl text-center">
-                      <span class="font-syne font-bold text-lg text-batara-lime">30 M²</span>
-                      <span class="text-gray-400 mx-1">/</span>
-                      <span class="font-syne font-bold text-lg">60 M²</span>
-                      <div class="text-[10px] text-gray-300 uppercase tracking-widest">LB / LT</div>
-                    </div>
-                  </div>
-
-                  <div class="space-y-3">
-                    <h3 class="font-syne font-bold text-xl text-batara-dark">Spesifikasi Bangunan</h3>
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-left spec-table border border-gray-100 rounded-xl overflow-hidden">
-                        <tbody class="divide-y divide-gray-100">
-                          <tr>
-                            <td class="font-medium text-gray-500 w-1/3">Pondasi</td>
-                            <td class="font-semibold text-batara-dark">Batu Kali</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Struktur</td>
-                            <td class="font-semibold text-batara-dark">Beton Bertulang</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dinding</td>
-                            <td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Lantai</td>
-                            <td class="font-semibold text-batara-dark">Keramik 40x40 cm</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Rangka Atap</td>
-                            <td class="font-semibold text-batara-dark">Baja Ringan</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Atap</td>
-                            <td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kusen</td>
-                            <td class="font-semibold text-batara-dark">Alumunium</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pintu Utama</td>
-                            <td class="font-semibold text-batara-dark">Double Multiplek</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Plafond</td>
-                            <td class="font-semibold text-batara-dark">GRC &amp; Rangka Hollow</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kamar Mandi</td>
-                            <td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Sanitair</td>
-                            <td class="font-semibold text-batara-dark">Closet Jongkok</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Air Bersih</td>
-                            <td class="font-semibold text-batara-dark">Air Komunal</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Listrik</td>
-                            <td class="font-semibold text-batara-dark">PLN 1300 Watt</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Septik Tank</td>
-                            <td class="font-semibold text-batara-dark">Biotank</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Cat Eksterior</td>
-                            <td class="font-semibold text-batara-dark">Propan</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#contact" class="btn-primary text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto">Minta Simulasi Cicilan</a>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Krisan."
-                      target="_blank" rel="noopener" class="btn-accent btn-shimmer text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto flex items-center justify-center gap-2">
-                      <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                      Tanya Unit via WA
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="flex items-center gap-2 text-xs font-syne font-bold text-batara-dark bg-gray-50 px-3.5 py-1.5 rounded-xl border border-gray-200">
+              <span>LB 30 M²</span>
+              <span class="text-gray-300">/</span>
+              <span>LT 60 M²</span>
             </div>
-
-            <!-- 3. DAISY -->
-            <div id="daisy"
-              class="bg-white rounded-3xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md border border-gray-100 scroll-mt-28 reveal interactive-card">
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                <!-- Left: Photos & Floor Plan -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="rounded-2xl overflow-hidden shadow-md bg-gray-100">
-                    <img src="assets/images/house-daisy.jpg" alt="Rumah Tipe Daisy Batara Parkview"
-                      class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                  </div>
-                  <div
-                    class="bg-[#f9fbf9] p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-center gap-6">
-                    <div
-                      class="w-32 h-44 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-white"
-                      onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Daisy')">
-                      <img src="assets/images/denah-krisan.jpg" alt="Denah Tipe Daisy"
-                        class="w-full h-full object-contain p-2 hover:scale-110 transition-transform">
-                    </div>
-                    <div class="space-y-2 text-center sm:text-left">
-                      <span
-                        class="text-xs font-semibold text-batara-lime bg-batara-dark px-3 py-1 rounded-full uppercase">Denah
-                        Ruang</span>
-                      <h4 class="font-syne font-bold text-lg text-batara-dark">Tata Ruang Optimal</h4>
-                      <p class="text-xs text-gray-500 font-poppins">Klik denah untuk memperbesar gambar detail ukuran
-                        tiap
-                        ruangan.</p>
-                      <button onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Daisy')"
-                        class="text-xs font-syne font-bold text-batara-dark hover:text-batara-lime underline inline-block pt-1">
-                        Lihat Denah Penuh &rarr;
-                      </button>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="amenity-tag">1 Kamar Mandi</span>
-                    <span class="amenity-tag">Carport Luas</span>
-                    <span class="amenity-tag">2 Kamar Tidur</span>
-                    <span class="amenity-tag">1 Ruang Tamu</span>
-                  </div>
-                </div>
-
-                <!-- Right: Title & Specification Table -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="border-b border-gray-100 pb-4 flex items-baseline justify-between flex-wrap gap-4">
-                    <div>
-                      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark">
-                        DAISY
-                      </h2>
-                      <p class="text-sm font-poppins font-semibold text-gray-500 mt-1">Hunian Favorit Keluarga Muda</p>
-                    </div>
-                    <div class="bg-batara-dark text-white px-5 py-2 rounded-2xl text-center">
-                      <span class="font-syne font-bold text-lg text-batara-lime">30 M²</span>
-                      <span class="text-gray-400 mx-1">/</span>
-                      <span class="font-syne font-bold text-lg">60 M²</span>
-                      <div class="text-[10px] text-gray-300 uppercase tracking-widest">LB / LT</div>
-                    </div>
-                  </div>
-
-                  <div class="space-y-3">
-                    <h3 class="font-syne font-bold text-xl text-batara-dark">Spesifikasi Bangunan</h3>
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-left spec-table border border-gray-100 rounded-xl overflow-hidden">
-                        <tbody class="divide-y divide-gray-100">
-                          <tr>
-                            <td class="font-medium text-gray-500 w-1/3">Pondasi</td>
-                            <td class="font-semibold text-batara-dark">Batu Kali</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Struktur</td>
-                            <td class="font-semibold text-batara-dark">Beton Bertulang</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dinding</td>
-                            <td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Lantai</td>
-                            <td class="font-semibold text-batara-dark">Keramik 40x40 cm</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Rangka Atap</td>
-                            <td class="font-semibold text-batara-dark">Baja Ringan</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Atap</td>
-                            <td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kusen</td>
-                            <td class="font-semibold text-batara-dark">Alumunium</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pintu Utama</td>
-                            <td class="font-semibold text-batara-dark">Double Multiplek</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Plafond</td>
-                            <td class="font-semibold text-batara-dark">GRC &amp; Rangka Hollow</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kamar Mandi</td>
-                            <td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Sanitair</td>
-                            <td class="font-semibold text-batara-dark">Closet Jongkok</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Air Bersih</td>
-                            <td class="font-semibold text-batara-dark">Air Komunal</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Listrik</td>
-                            <td class="font-semibold text-batara-dark">PLN 1300 Watt</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Septik Tank</td>
-                            <td class="font-semibold text-batara-dark">Biotank</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Cat Eksterior</td>
-                            <td class="font-semibold text-batara-dark">Propan</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#contact" class="btn-primary text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto">Minta Simulasi Cicilan</a>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Daisy."
-                      target="_blank" rel="noopener" class="btn-accent btn-shimmer text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto flex items-center justify-center gap-2">
-                      <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                      Tanya Unit via WA
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 4. AMARILYS -->
-            <div id="amarilys"
-              class="bg-white rounded-3xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md border border-gray-100 scroll-mt-28 reveal interactive-card">
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                <!-- Left: Photos & Floor Plan -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="rounded-2xl overflow-hidden shadow-md bg-gray-100">
-                    <img src="assets/images/house-amarilys.jpg" alt="Rumah Tipe Amarilys Batara Parkview"
-                      class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                  </div>
-                  <div
-                    class="bg-[#f9fbf9] p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-center gap-6">
-                    <div
-                      class="w-32 h-44 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-white"
-                      onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys')">
-                      <img src="assets/images/denah-amarilys.png" alt="Denah Tipe Amarilys"
-                        class="w-full h-full object-contain p-2 hover:scale-110 transition-transform">
-                    </div>
-                    <div class="space-y-2 text-center sm:text-left">
-                      <span
-                        class="text-xs font-semibold text-batara-lime bg-batara-dark px-3 py-1 rounded-full uppercase">Denah
-                        Ruang</span>
-                      <h4 class="font-syne font-bold text-lg text-batara-dark">Tata Ruang Optimal</h4>
-                      <p class="text-xs text-gray-500 font-poppins">Dilengkapi dapur, carport keramik, dan granit tile
-                        60x60.</p>
-                      <button onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys')"
-                        class="text-xs font-syne font-bold text-batara-dark hover:text-batara-lime underline inline-block pt-1">
-                        Lihat Denah Penuh &rarr;
-                      </button>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="amenity-tag">1 Kamar Mandi</span>
-                    <span class="amenity-tag">Carport Luas</span>
-                    <span class="amenity-tag">2 Kamar Tidur</span>
-                    <span class="amenity-tag">1 Ruang Tamu</span>
-                    <span class="amenity-tag">1 Dapur</span>
-                    <span class="amenity-tag">Ceiling Tinggi</span>
-                  </div>
-                </div>
-
-                <!-- Right: Title & Specification Table -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="border-b border-gray-100 pb-4 flex items-baseline justify-between flex-wrap gap-4">
-                    <div>
-                      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark">
-                        AMARILYS
-                      </h2>
-                      <p class="text-sm font-poppins font-semibold text-gray-500 mt-1">Hunian Komersil Mewah</p>
-                    </div>
-                    <div class="bg-batara-dark text-white px-5 py-2 rounded-2xl text-center">
-                      <span class="font-syne font-bold text-lg text-batara-lime">30 M²</span>
-                      <span class="text-gray-400 mx-1">/</span>
-                      <span class="font-syne font-bold text-lg">60 M²</span>
-                      <div class="text-[10px] text-gray-300 uppercase tracking-widest">LB / LT</div>
-                    </div>
-                  </div>
-
-                  <div class="space-y-3">
-                    <h3 class="font-syne font-bold text-xl text-batara-dark">Spesifikasi Bangunan</h3>
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-left spec-table border border-gray-100 rounded-xl overflow-hidden">
-                        <tbody class="divide-y divide-gray-100">
-                          <tr>
-                            <td class="font-medium text-gray-500 w-1/3">Pondasi</td>
-                            <td class="font-semibold text-batara-dark">Batu Kali</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Struktur</td>
-                            <td class="font-semibold text-batara-dark">Beton Bertulang</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dinding</td>
-                            <td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Lantai</td>
-                            <td class="font-semibold text-batara-dark">Granite Tile 60x60cm</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Rangka Atap</td>
-                            <td class="font-semibold text-batara-dark">Baja Ringan</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Atap</td>
-                            <td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kusen</td>
-                            <td class="font-semibold text-batara-dark">Alumunium</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pintu Utama</td>
-                            <td class="font-semibold text-batara-dark">Panel Meranti</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Plafond</td>
-                            <td class="font-semibold text-batara-dark">Gypsum &amp; Rangka Hollow</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kamar Mandi</td>
-                            <td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Sanitair</td>
-                            <td class="font-semibold text-batara-dark">Closet Duduk Ex. Oulu</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Air Bersih</td>
-                            <td class="font-semibold text-batara-dark">Air Komunal</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Listrik</td>
-                            <td class="font-semibold text-batara-dark">PLN 2200 Watt</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Septik Tank</td>
-                            <td class="font-semibold text-batara-dark">Biotank</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Cat Eksterior</td>
-                            <td class="font-semibold text-batara-dark">Dulux Weathershield</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dapur</td>
-                            <td class="font-semibold text-batara-dark">Sink, Meja Dapur Beton</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Carport</td>
-                            <td class="font-semibold text-batara-dark">Keramik</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#contact" class="btn-primary text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto">Minta Simulasi Cicilan</a>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Amarilys."
-                      target="_blank" rel="noopener" class="btn-accent btn-shimmer text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto flex items-center justify-center gap-2">
-                      <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                      Tanya Unit via WA
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 5. AMARILYS PLUS -->
-            <div id="amarilys-plus"
-              class="bg-white rounded-3xl p-5 sm:p-8 lg:p-12 shadow-sm hover:shadow-md border border-gray-100 scroll-mt-28 reveal interactive-card">
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                <!-- Left: Photos & Floor Plan -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="rounded-2xl overflow-hidden shadow-md bg-gray-100">
-                    <img src="assets/images/house-amarilys-plus.jpg" alt="Rumah Tipe Amarilys Plus Batara Parkview"
-                      class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
-                  </div>
-                  <div
-                    class="bg-[#f9fbf9] p-4 sm:p-6 rounded-2xl border border-gray-100 flex flex-col sm:flex-row items-center gap-6">
-                    <div
-                      class="w-32 h-44 flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-gray-200 bg-white"
-                      onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys Plus')">
-                      <img src="assets/images/denah-amarilys.png" alt="Denah Tipe Amarilys Plus"
-                        class="w-full h-full object-contain p-2 hover:scale-110 transition-transform">
-                    </div>
-                    <div class="space-y-2 text-center sm:text-left">
-                      <span
-                        class="text-xs font-semibold text-batara-lime bg-batara-dark px-3 py-1 rounded-full uppercase">Denah
-                        Ruang</span>
-                      <h4 class="font-syne font-bold text-lg text-batara-dark">Plus Pagar &amp; Carport</h4>
-                      <p class="text-xs text-gray-500 font-poppins">Dilengkapi pagar depan minimalis kokoh dan carport
-                        berlantai keramik.</p>
-                      <button onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys Plus')"
-                        class="text-xs font-syne font-bold text-batara-dark hover:text-batara-lime underline inline-block pt-1">
-                        Lihat Denah Penuh &rarr;
-                      </button>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="amenity-tag">1 Kamar Mandi</span>
-                    <span class="amenity-tag">Carport Luas</span>
-                    <span class="amenity-tag">Pagar</span>
-                    <span class="amenity-tag">2 Kamar Tidur</span>
-                    <span class="amenity-tag">1 Ruang Tamu</span>
-                    <span class="amenity-tag">1 Dapur</span>
-                    <span class="amenity-tag">Ceiling Tinggi</span>
-                  </div>
-                </div>
-
-                <!-- Right: Title & Specification Table -->
-                <div class="lg:col-span-6 space-y-6">
-                  <div class="border-b border-gray-100 pb-4 flex items-baseline justify-between flex-wrap gap-4">
-                    <div>
-                      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark">
-                        AMARILYS PLUS
-                      </h2>
-                      <p class="text-sm font-poppins font-semibold text-gray-500 mt-1">Hunian Komersil Komplit Plus
-                        Pagar
-                      </p>
-                    </div>
-                    <div class="bg-batara-dark text-white px-5 py-2 rounded-2xl text-center">
-                      <span class="font-syne font-bold text-lg text-batara-lime">30 M²</span>
-                      <span class="text-gray-400 mx-1">/</span>
-                      <span class="font-syne font-bold text-lg">60 M²</span>
-                      <div class="text-[10px] text-gray-300 uppercase tracking-widest">LB / LT</div>
-                    </div>
-                  </div>
-
-                  <div class="space-y-3">
-                    <h3 class="font-syne font-bold text-xl text-batara-dark">Spesifikasi Bangunan</h3>
-                    <div class="overflow-x-auto">
-                      <table class="w-full text-left spec-table border border-gray-100 rounded-xl overflow-hidden">
-                        <tbody class="divide-y divide-gray-100">
-                          <tr>
-                            <td class="font-medium text-gray-500 w-1/3">Pondasi</td>
-                            <td class="font-semibold text-batara-dark">Batu Kali</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Struktur</td>
-                            <td class="font-semibold text-batara-dark">Beton Bertulang</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dinding</td>
-                            <td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Lantai</td>
-                            <td class="font-semibold text-batara-dark">Granite Tile 60x60cm</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Rangka Atap</td>
-                            <td class="font-semibold text-batara-dark">Baja Ringan</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Atap</td>
-                            <td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kusen</td>
-                            <td class="font-semibold text-batara-dark">Alumunium</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pintu Utama</td>
-                            <td class="font-semibold text-batara-dark">Panel Meranti</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Plafond</td>
-                            <td class="font-semibold text-batara-dark">Gypsum &amp; Rangka Hollow</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Kamar Mandi</td>
-                            <td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Sanitair</td>
-                            <td class="font-semibold text-batara-dark">Closet Duduk Ex. Oulu</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Air Bersih</td>
-                            <td class="font-semibold text-batara-dark">Air Komunal</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Listrik</td>
-                            <td class="font-semibold text-batara-dark">PLN 2200 Watt</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Septik Tank</td>
-                            <td class="font-semibold text-batara-dark">Biotank</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Cat Eksterior</td>
-                            <td class="font-semibold text-batara-dark">Dulux Weathershield</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Dapur</td>
-                            <td class="font-semibold text-batara-dark">Sink, Meja Dapur Beton</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Carport</td>
-                            <td class="font-semibold text-batara-dark">Keramik</td>
-                          </tr>
-                          <tr>
-                            <td class="font-medium text-gray-500">Pagar</td>
-                            <td class="font-semibold text-batara-dark">Pagar Besi Minimalis Termasuk</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <a href="#contact" class="btn-primary text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto">Minta Simulasi Cicilan</a>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Amarilys%20Plus."
-                      target="_blank" rel="noopener" class="btn-accent btn-shimmer text-center py-3 px-5 text-sm sm:text-base w-full sm:w-auto flex items-center justify-center gap-2">
-                      <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                      Tanya Unit via WA
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </section>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-6">
+            <!-- Left: Interactive Visual Showcase (Fasad & Denah Toggle) -->
+            <div class="lg:col-span-6 space-y-5">
+              <!-- View Switcher Controls -->
+              <div class="flex items-center justify-between">
+                <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
+                  <button type="button" onclick="switchUnitView('kalmia', 'fasad')"
+                    class="btn-view-fasad px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-batara-dark text-white shadow-xs">
+                    Tampak Fasad 3D
+                  </button>
+                  <button type="button" onclick="switchUnitView('kalmia', 'denah')"
+                    class="btn-view-denah px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-white text-gray-600 hover:bg-gray-100">
+                    Denah Tata Ruang
+                  </button>
+                </div>
+                <button type="button" onclick="openDenahModal('assets/images/denah-kalmia.jpg', 'Kalmia 30/60')"
+                  class="text-xs font-syne font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1">
+                  <span>Zoom Denah HD</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                </button>
+              </div>
+
+              <!-- Media Containers -->
+              <div class="unit-fasad-container rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative group aspect-[4/3]">
+                <img src="assets/images/house-kalmia.jpg" alt="Rumah Tipe Kalmia Batara Parkview"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-poppins px-3 py-1 rounded-full">
+                  Fasad Kalmia 30/60
+                </span>
+              </div>
+
+              <div class="unit-denah-container hidden rounded-2xl overflow-hidden bg-[#fafcfa] border border-gray-200 relative aspect-[4/3] flex items-center justify-center p-4 cursor-pointer"
+                onclick="openDenahModal('assets/images/denah-kalmia.jpg', 'Kalmia 30/60')">
+                <img src="assets/images/denah-kalmia.jpg" alt="Denah Tipe Kalmia"
+                  class="max-h-full w-auto object-contain hover:scale-105 transition-transform">
+                <span class="absolute bottom-3 right-3 bg-batara-dark/80 text-white text-[11px] font-syne px-3 py-1 rounded-full flex items-center gap-1">
+                  🔍 Klik untuk Perbesar
+                </span>
+              </div>
+
+              <!-- Key Architectural Highlights Row -->
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-1">
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🛏️</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2 KT</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Kamar</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚿</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 KM</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Mandi</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚗</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 Mobil</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Carport</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">📐</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">30/60</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">LB / LT</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">⚡</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1.300W</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">PLN</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">💧</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Komunal</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Air Bersih</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Property Profile & Intelligent Specs -->
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <h3 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight">
+                  KALMIA
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 mt-1 leading-relaxed">
+                  Hunian modern minimalis dengan keunggulan plafon gypsum drop ceiling pada ruang tamu, memberikan kesan luas, adem, dan berkelas.
+                </p>
+              </div>
+
+              <!-- Financial Box (Price & KPR Simulation) -->
+              <div class="bg-[#f3f7f3] border border-[#dcebdc] p-4 sm:p-5 rounded-2xl space-y-2.5">
+                <div class="flex items-baseline justify-between flex-wrap gap-2">
+                  <div>
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-gray-500 font-semibold block">Harga Rumah</span>
+                    <span class="font-syne font-extrabold text-2xl sm:text-3xl text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-emerald-700 font-bold block">Cicilan Mulai</span>
+                    <span class="font-syne font-bold text-xl sm:text-2xl text-emerald-700">Rp 1,1 Jt<span class="text-xs font-normal text-gray-600">/bln</span></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-emerald-200/60 flex items-center justify-between text-xs font-poppins text-emerald-900 font-medium">
+                  <span>✓ Suku Bunga Subsidi 5% Flat</span>
+                  <span>✓ Promo Bebas Biaya KPR &amp; DP 0%</span>
+                </div>
+              </div>
+
+              <!-- Curated Primary Material Snapshot -->
+              <div class="space-y-3">
+                <span class="text-xs font-syne font-bold uppercase tracking-wider text-gray-400 block">Kualitas Konstruksi Unggulan</span>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins">
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Pondasi &amp; Struktur</span>
+                    <span class="font-semibold text-batara-dark">Batu Kali &amp; Beton Bertulang</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Dinding</span>
+                    <span class="font-semibold text-batara-dark">Bata Ringan (Plester &amp; Aci)</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Lantai</span>
+                    <span class="font-semibold text-batara-dark">Keramik 40x40 cm</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Rangka Atap &amp; Penutup</span>
+                    <span class="font-semibold text-batara-dark">Baja Ringan &amp; Genteng Metal</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Collapsible Full 15 Specs Details -->
+              <div>
+                <button type="button" onclick="toggleUnitSpecs('kalmia-specs', this)"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gray-50 hover:bg-emerald-50/70 border border-gray-200 transition-all flex items-center justify-between text-xs font-syne font-bold text-batara-dark cursor-pointer group">
+                  <span class="spec-toggle-text">Lihat 15 Spesifikasi Konstruksi Lengkap</span>
+                  <span class="spec-toggle-arrow transform transition-transform text-gray-400 group-hover:text-batara-dark">▾</span>
+                </button>
+
+                <div id="kalmia-specs" class="hidden mt-3 overflow-x-auto rounded-xl border border-gray-100">
+                  <table class="w-full text-left spec-table text-xs">
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="font-medium text-gray-500 w-1/3">Pondasi</td><td class="font-semibold text-batara-dark">Batu Kali</td></tr>
+                      <tr><td class="font-medium text-gray-500">Struktur</td><td class="font-semibold text-batara-dark">Beton Bertulang</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dinding</td><td class="font-semibold text-batara-dark">Bata Ringan, Aci &amp; Cat</td></tr>
+                      <tr><td class="font-medium text-gray-500">Lantai</td><td class="font-semibold text-batara-dark">Keramik 40x40 cm</td></tr>
+                      <tr><td class="font-medium text-gray-500">Rangka Atap</td><td class="font-semibold text-batara-dark">Baja Ringan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Atap</td><td class="font-semibold text-batara-dark">Genteng Metal Pasir</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kusen</td><td class="font-semibold text-batara-dark">Alumunium</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pintu Utama</td><td class="font-semibold text-batara-dark">Double Multiplek</td></tr>
+                      <tr><td class="font-medium text-gray-500">Plafond</td><td class="font-semibold text-batara-dark">Gypsum &amp; Drop Ceiling Ruang Tamu</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kamar Mandi</td><td class="font-semibold text-batara-dark">Keramik 25x25cm, Keramik 40x25cm, PVC + Slot</td></tr>
+                      <tr><td class="font-medium text-gray-500">Sanitair</td><td class="font-semibold text-batara-dark">Closet Jongkok</td></tr>
+                      <tr><td class="font-medium text-gray-500">Air Bersih</td><td class="font-semibold text-batara-dark">Jaringan Air Komunal</td></tr>
+                      <tr><td class="font-medium text-gray-500">Listrik</td><td class="font-semibold text-batara-dark">PLN 1.300 Watt</td></tr>
+                      <tr><td class="font-medium text-gray-500">Septiktank</td><td class="font-semibold text-batara-dark">Biotank Ramah Lingkungan</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Kalmia%2030/60."
+                  target="_blank" rel="noopener"
+                  class="btn-primary text-center py-3.5 px-6 text-sm font-syne font-bold flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Tanya Unit Kalmia via WA</span>
+                </a>
+                <a href="#contact"
+                  class="btn-outline text-center py-3.5 px-5 text-sm font-syne font-semibold rounded-full border border-batara-dark text-batara-dark hover:bg-batara-dark hover:text-white transition-all">
+                  Minta Simulasi Cicilan
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================================
+             2. KRISAN 30/60 (SUBSIDI FLPP)
+             ========================================================================= -->
+        <article id="krisan" data-category="subsidi"
+          class="tipe-unit-card bg-white rounded-3xl p-6 sm:p-9 lg:p-12 shadow-sm border border-gray-200/70 scroll-mt-28 reveal">
+          
+          <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-gray-100">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-syne font-bold rounded-full border border-emerald-200">
+                Subsidi FLPP Pemerintah
+              </span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-poppins font-medium rounded-full">
+                Genteng Beton Monier &amp; Cat Propan
+              </span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-syne font-bold text-batara-dark bg-gray-50 px-3.5 py-1.5 rounded-xl border border-gray-200">
+              <span>LB 30 M²</span>
+              <span class="text-gray-300">/</span>
+              <span>LT 60 M²</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-6">
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
+                  <button type="button" onclick="switchUnitView('krisan', 'fasad')"
+                    class="btn-view-fasad px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-batara-dark text-white shadow-xs">
+                    Tampak Fasad 3D
+                  </button>
+                  <button type="button" onclick="switchUnitView('krisan', 'denah')"
+                    class="btn-view-denah px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-white text-gray-600 hover:bg-gray-100">
+                    Denah Tata Ruang
+                  </button>
+                </div>
+                <button type="button" onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Krisan 30/60')"
+                  class="text-xs font-syne font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1">
+                  <span>Zoom Denah HD</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                </button>
+              </div>
+
+              <div class="unit-fasad-container rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative group aspect-[4/3]">
+                <img src="assets/img/KRISAN.svg" alt="Rumah Tipe Krisan Batara Parkview"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-poppins px-3 py-1 rounded-full">
+                  Fasad Krisan 30/60
+                </span>
+              </div>
+
+              <div class="unit-denah-container hidden rounded-2xl overflow-hidden bg-[#fafcfa] border border-gray-200 relative aspect-[4/3] flex items-center justify-center p-4 cursor-pointer"
+                onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Krisan 30/60')">
+                <img src="assets/images/denah-krisan.jpg" alt="Denah Tipe Krisan"
+                  class="max-h-full w-auto object-contain hover:scale-105 transition-transform">
+                <span class="absolute bottom-3 right-3 bg-batara-dark/80 text-white text-[11px] font-syne px-3 py-1 rounded-full flex items-center gap-1">
+                  🔍 Klik untuk Perbesar
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-1">
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🛏️</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2 KT</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Kamar</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚿</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 KM</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Mandi</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚗</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 Mobil</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Carport</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">📐</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">30/60</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">LB / LT</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">⚡</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1.300W</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">PLN</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">💧</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Komunal</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Air Bersih</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <h3 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight">
+                  KRISAN
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 mt-1 leading-relaxed">
+                  Hunian favorit praktis dan asri dengan rangka hollow kuat, atap genteng beton Monier, dan tampilan eksterior elegan terlindungi cat Propan.
+                </p>
+              </div>
+
+              <div class="bg-[#f3f7f3] border border-[#dcebdc] p-4 sm:p-5 rounded-2xl space-y-2.5">
+                <div class="flex items-baseline justify-between flex-wrap gap-2">
+                  <div>
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-gray-500 font-semibold block">Harga Rumah</span>
+                    <span class="font-syne font-extrabold text-2xl sm:text-3xl text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-emerald-700 font-bold block">Cicilan Mulai</span>
+                    <span class="font-syne font-bold text-xl sm:text-2xl text-emerald-700">Rp 1,1 Jt<span class="text-xs font-normal text-gray-600">/bln</span></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-emerald-200/60 flex items-center justify-between text-xs font-poppins text-emerald-900 font-medium">
+                  <span>✓ Suku Bunga Subsidi 5% Flat</span>
+                  <span>✓ Promo Bebas Biaya KPR &amp; DP 0%</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <span class="text-xs font-syne font-bold uppercase tracking-wider text-gray-400 block">Kualitas Konstruksi Unggulan</span>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins">
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Pondasi &amp; Struktur</span>
+                    <span class="font-semibold text-batara-dark">Batu Kali &amp; Beton Bertulang</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Dinding &amp; Cat</span>
+                    <span class="font-semibold text-batara-dark">Batako Aci &amp; Cat Propan</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Lantai</span>
+                    <span class="font-semibold text-batara-dark">Keramik 40x40 cm</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Atap</span>
+                    <span class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" onclick="toggleUnitSpecs('krisan-specs', this)"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gray-50 hover:bg-emerald-50/70 border border-gray-200 transition-all flex items-center justify-between text-xs font-syne font-bold text-batara-dark cursor-pointer group">
+                  <span class="spec-toggle-text">Lihat 15 Spesifikasi Konstruksi Lengkap</span>
+                  <span class="spec-toggle-arrow transform transition-transform text-gray-400 group-hover:text-batara-dark">▾</span>
+                </button>
+
+                <div id="krisan-specs" class="hidden mt-3 overflow-x-auto rounded-xl border border-gray-100">
+                  <table class="w-full text-left spec-table text-xs">
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="font-medium text-gray-500 w-1/3">Pondasi</td><td class="font-semibold text-batara-dark">Batu Kali</td></tr>
+                      <tr><td class="font-medium text-gray-500">Struktur</td><td class="font-semibold text-batara-dark">Beton Bertulang</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dinding</td><td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat Propan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Lantai</td><td class="font-semibold text-batara-dark">Keramik 40x40 cm</td></tr>
+                      <tr><td class="font-medium text-gray-500">Rangka Atap</td><td class="font-semibold text-batara-dark">Baja Ringan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Atap</td><td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kusen</td><td class="font-semibold text-batara-dark">Alumunium</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pintu Utama</td><td class="font-semibold text-batara-dark">Double Multiplek</td></tr>
+                      <tr><td class="font-medium text-gray-500">Plafond</td><td class="font-semibold text-batara-dark">GRC &amp; Rangka Hollow</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kamar Mandi</td><td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td></tr>
+                      <tr><td class="font-medium text-gray-500">Sanitair</td><td class="font-semibold text-batara-dark">Closet Jongkok</td></tr>
+                      <tr><td class="font-medium text-gray-500">Air Bersih</td><td class="font-semibold text-batara-dark">Air Komunal Terjamin</td></tr>
+                      <tr><td class="font-medium text-gray-500">Listrik</td><td class="font-semibold text-batara-dark">PLN 1.300 Watt</td></tr>
+                      <tr><td class="font-medium text-gray-500">Septiktank</td><td class="font-semibold text-batara-dark">Biotank Ramah Lingkungan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Cat Eksterior</td><td class="font-semibold text-batara-dark">Propan Berkualitas</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Krisan%2030/60."
+                  target="_blank" rel="noopener"
+                  class="btn-primary text-center py-3.5 px-6 text-sm font-syne font-bold flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Tanya Unit Krisan via WA</span>
+                </a>
+                <a href="#contact"
+                  class="btn-outline text-center py-3.5 px-5 text-sm font-syne font-semibold rounded-full border border-batara-dark text-batara-dark hover:bg-batara-dark hover:text-white transition-all">
+                  Minta Simulasi Cicilan
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================================
+             3. DAISY 30/60 (SUBSIDI FLPP)
+             ========================================================================= -->
+        <article id="daisy" data-category="subsidi"
+          class="tipe-unit-card bg-white rounded-3xl p-6 sm:p-9 lg:p-12 shadow-sm border border-gray-200/70 scroll-mt-28 reveal">
+          
+          <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-gray-100">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-syne font-bold rounded-full border border-emerald-200">
+                Subsidi FLPP Pemerintah
+              </span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-poppins font-medium rounded-full">
+                Desain Geometris Manis
+              </span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-syne font-bold text-batara-dark bg-gray-50 px-3.5 py-1.5 rounded-xl border border-gray-200">
+              <span>LB 30 M²</span>
+              <span class="text-gray-300">/</span>
+              <span>LT 60 M²</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-6">
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
+                  <button type="button" onclick="switchUnitView('daisy', 'fasad')"
+                    class="btn-view-fasad px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-batara-dark text-white shadow-xs">
+                    Tampak Fasad 3D
+                  </button>
+                  <button type="button" onclick="switchUnitView('daisy', 'denah')"
+                    class="btn-view-denah px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-white text-gray-600 hover:bg-gray-100">
+                    Denah Tata Ruang
+                  </button>
+                </div>
+                <button type="button" onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Daisy 30/60')"
+                  class="text-xs font-syne font-bold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1">
+                  <span>Zoom Denah HD</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                </button>
+              </div>
+
+              <div class="unit-fasad-container rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative group aspect-[4/3]">
+                <img src="assets/images/house-daisy.jpg" alt="Rumah Tipe Daisy Batara Parkview"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-poppins px-3 py-1 rounded-full">
+                  Fasad Daisy 30/60
+                </span>
+              </div>
+
+              <div class="unit-denah-container hidden rounded-2xl overflow-hidden bg-[#fafcfa] border border-gray-200 relative aspect-[4/3] flex items-center justify-center p-4 cursor-pointer"
+                onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Daisy 30/60')">
+                <img src="assets/images/denah-krisan.jpg" alt="Denah Tipe Daisy"
+                  class="max-h-full w-auto object-contain hover:scale-105 transition-transform">
+                <span class="absolute bottom-3 right-3 bg-batara-dark/80 text-white text-[11px] font-syne px-3 py-1 rounded-full flex items-center gap-1">
+                  🔍 Klik untuk Perbesar
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-1">
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🛏️</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2 KT</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Kamar</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚿</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 KM</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Mandi</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚗</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 Mobil</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Carport</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">📐</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">30/60</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">LB / LT</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">⚡</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1.300W</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">PLN</span>
+                </div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">💧</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Komunal</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Air Bersih</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <h3 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight">
+                  DAISY
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 mt-1 leading-relaxed">
+                  Hunian bersahaja dengan aksen fasad modern, bukaan jendela lebar untuk sirkulasi cahaya melimpah, dan kanopi carport praktis.
+                </p>
+              </div>
+
+              <div class="bg-[#f3f7f3] border border-[#dcebdc] p-4 sm:p-5 rounded-2xl space-y-2.5">
+                <div class="flex items-baseline justify-between flex-wrap gap-2">
+                  <div>
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-gray-500 font-semibold block">Harga Rumah</span>
+                    <span class="font-syne font-extrabold text-2xl sm:text-3xl text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-emerald-700 font-bold block">Cicilan Mulai</span>
+                    <span class="font-syne font-bold text-xl sm:text-2xl text-emerald-700">Rp 1,1 Jt<span class="text-xs font-normal text-gray-600">/bln</span></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-emerald-200/60 flex items-center justify-between text-xs font-poppins text-emerald-900 font-medium">
+                  <span>✓ Suku Bunga Subsidi 5% Flat</span>
+                  <span>✓ Promo Bebas Biaya KPR &amp; DP 0%</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <span class="text-xs font-syne font-bold uppercase tracking-wider text-gray-400 block">Kualitas Konstruksi Unggulan</span>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins">
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Pondasi &amp; Struktur</span>
+                    <span class="font-semibold text-batara-dark">Batu Kali &amp; Beton Bertulang</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Dinding &amp; Cat</span>
+                    <span class="font-semibold text-batara-dark">Batako Aci &amp; Cat Propan</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Lantai</span>
+                    <span class="font-semibold text-batara-dark">Keramik 40x40 cm</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Atap</span>
+                    <span class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" onclick="toggleUnitSpecs('daisy-specs', this)"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gray-50 hover:bg-emerald-50/70 border border-gray-200 transition-all flex items-center justify-between text-xs font-syne font-bold text-batara-dark cursor-pointer group">
+                  <span class="spec-toggle-text">Lihat 15 Spesifikasi Konstruksi Lengkap</span>
+                  <span class="spec-toggle-arrow transform transition-transform text-gray-400 group-hover:text-batara-dark">▾</span>
+                </button>
+
+                <div id="daisy-specs" class="hidden mt-3 overflow-x-auto rounded-xl border border-gray-100">
+                  <table class="w-full text-left spec-table text-xs">
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="font-medium text-gray-500 w-1/3">Pondasi</td><td class="font-semibold text-batara-dark">Batu Kali</td></tr>
+                      <tr><td class="font-medium text-gray-500">Struktur</td><td class="font-semibold text-batara-dark">Beton Bertulang</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dinding</td><td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat Propan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Lantai</td><td class="font-semibold text-batara-dark">Keramik 40x40 cm</td></tr>
+                      <tr><td class="font-medium text-gray-500">Rangka Atap</td><td class="font-semibold text-batara-dark">Baja Ringan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Atap</td><td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kusen</td><td class="font-semibold text-batara-dark">Alumunium</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pintu Utama</td><td class="font-semibold text-batara-dark">Double Multiplek</td></tr>
+                      <tr><td class="font-medium text-gray-500">Plafond</td><td class="font-semibold text-batara-dark">GRC &amp; Rangka Hollow</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kamar Mandi</td><td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td></tr>
+                      <tr><td class="font-medium text-gray-500">Sanitair</td><td class="font-semibold text-batara-dark">Closet Jongkok</td></tr>
+                      <tr><td class="font-medium text-gray-500">Air Bersih</td><td class="font-semibold text-batara-dark">Air Komunal Terjamin</td></tr>
+                      <tr><td class="font-medium text-gray-500">Listrik</td><td class="font-semibold text-batara-dark">PLN 1.300 Watt</td></tr>
+                      <tr><td class="font-medium text-gray-500">Septiktank</td><td class="font-semibold text-batara-dark">Biotank Ramah Lingkungan</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Daisy%2030/60."
+                  target="_blank" rel="noopener"
+                  class="btn-primary text-center py-3.5 px-6 text-sm font-syne font-bold flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Tanya Unit Daisy via WA</span>
+                </a>
+                <a href="#contact"
+                  class="btn-outline text-center py-3.5 px-5 text-sm font-syne font-semibold rounded-full border border-batara-dark text-batara-dark hover:bg-batara-dark hover:text-white transition-all">
+                  Minta Simulasi Cicilan
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================================
+             4. AMARILYS 30/60 (KOMERSIL PREMIUM)
+             ========================================================================= -->
+        <article id="amarilys" data-category="komersil"
+          class="tipe-unit-card bg-white rounded-3xl p-6 sm:p-9 lg:p-12 shadow-sm border border-amber-200/60 scroll-mt-28 reveal">
+          
+          <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-gray-100">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3.5 py-1 bg-amber-50 text-amber-900 text-xs font-syne font-bold rounded-full border border-amber-200 flex items-center gap-1.5">
+                <span>⭐</span>
+                Komersil Premium
+              </span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-poppins font-medium rounded-full">
+                Granit Tile 60x60 &amp; Pintu Meranti
+              </span>
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-poppins font-medium rounded-full">
+                Termasuk Dapur Meja Beton
+              </span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-syne font-bold text-batara-dark bg-gray-50 px-3.5 py-1.5 rounded-xl border border-gray-200">
+              <span>LB 30 M²</span>
+              <span class="text-gray-300">/</span>
+              <span>LT 60 M²</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-6">
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
+                  <button type="button" onclick="switchUnitView('amarilys', 'fasad')"
+                    class="btn-view-fasad px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-batara-dark text-white shadow-xs">
+                    Tampak Fasad 3D
+                  </button>
+                  <button type="button" onclick="switchUnitView('amarilys', 'denah')"
+                    class="btn-view-denah px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-white text-gray-600 hover:bg-gray-100">
+                    Denah Tata Ruang
+                  </button>
+                </div>
+                <button type="button" onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys 30/60')"
+                  class="text-xs font-syne font-bold text-amber-800 hover:text-amber-900 inline-flex items-center gap-1">
+                  <span>Zoom Denah HD</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                </button>
+              </div>
+
+              <div class="unit-fasad-container rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative group aspect-[4/3]">
+                <img src="assets/images/house-amarilys.jpg" alt="Rumah Tipe Amarilys Batara Parkview"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-poppins px-3 py-1 rounded-full">
+                  Fasad Amarilys Komersil 30/60
+                </span>
+              </div>
+
+              <div class="unit-denah-container hidden rounded-2xl overflow-hidden bg-[#fafcfa] border border-gray-200 relative aspect-[4/3] flex items-center justify-center p-4 cursor-pointer"
+                onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys 30/60')">
+                <img src="assets/images/denah-amarilys.png" alt="Denah Tipe Amarilys"
+                  class="max-h-full w-auto object-contain hover:scale-105 transition-transform">
+                <span class="absolute bottom-3 right-3 bg-batara-dark/80 text-white text-[11px] font-syne px-3 py-1 rounded-full flex items-center gap-1">
+                  🔍 Klik untuk Perbesar
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-1">
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🛏️</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2 KT</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Kamar</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚿</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">1 KM</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Closet Duduk</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🍳</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Dapur</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">+ Meja Sink</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">✨</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Granit</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">60x60 cm</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">⚡</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2.200W</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">PLN</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚗</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Carport</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Keramik</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <h3 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight">
+                  AMARILYS
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 mt-1 leading-relaxed">
+                  Hunian komersil mewah dengan spesifikasi premium: lantai full granit 60x60, pintu panel kayu meranti, kloset duduk Oulu, serta dapur beton dan carport berkeramik.
+                </p>
+              </div>
+
+              <div class="bg-[#faf7f0] border border-[#eee2c6] p-4 sm:p-5 rounded-2xl space-y-2.5">
+                <div class="flex items-baseline justify-between flex-wrap gap-2">
+                  <div>
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-gray-500 font-semibold block">Harga Komersil</span>
+                    <span class="font-syne font-extrabold text-2xl sm:text-3xl text-batara-dark">Mulai Rp 200 Jutaan</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-amber-800 font-bold block">Cicilan Fleksibel</span>
+                    <span class="font-syne font-bold text-xl sm:text-2xl text-amber-900">Mulai Rp 1,4 Jt<span class="text-xs font-normal text-gray-600">/bln</span></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-amber-200/70 flex items-center justify-between text-xs font-poppins text-amber-950 font-medium">
+                  <span>✓ KPR Komersil Semua Bank Mitra</span>
+                  <span>✓ Cat Eksterior Dulux Weathershield</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <span class="text-xs font-syne font-bold uppercase tracking-wider text-gray-400 block">Material &amp; Finishing Komersil</span>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins">
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Lantai Utama</span>
+                    <span class="font-semibold text-batara-dark">Granite Tile 60x60 cm</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Pintu Utama</span>
+                    <span class="font-semibold text-batara-dark">Kayu Panel Meranti</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Kamar Mandi &amp; Sanitair</span>
+                    <span class="font-semibold text-batara-dark">Closet Duduk Ex. Oulu</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Daya Listrik &amp; Cat</span>
+                    <span class="font-semibold text-batara-dark">2.200 Watt &amp; Dulux Weathershield</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" onclick="toggleUnitSpecs('amarilys-specs', this)"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gray-50 hover:bg-amber-50/70 border border-gray-200 transition-all flex items-center justify-between text-xs font-syne font-bold text-batara-dark cursor-pointer group">
+                  <span class="spec-toggle-text">Lihat 17 Spesifikasi Komersil Lengkap</span>
+                  <span class="spec-toggle-arrow transform transition-transform text-gray-400 group-hover:text-batara-dark">▾</span>
+                </button>
+
+                <div id="amarilys-specs" class="hidden mt-3 overflow-x-auto rounded-xl border border-gray-100">
+                  <table class="w-full text-left spec-table text-xs">
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="font-medium text-gray-500 w-1/3">Pondasi</td><td class="font-semibold text-batara-dark">Batu Kali</td></tr>
+                      <tr><td class="font-medium text-gray-500">Struktur</td><td class="font-semibold text-batara-dark">Beton Bertulang</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dinding</td><td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td></tr>
+                      <tr><td class="font-medium text-gray-500">Lantai</td><td class="font-semibold text-batara-dark">Granite Tile 60x60 cm</td></tr>
+                      <tr><td class="font-medium text-gray-500">Rangka Atap</td><td class="font-semibold text-batara-dark">Baja Ringan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Atap</td><td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kusen</td><td class="font-semibold text-batara-dark">Alumunium</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pintu Utama</td><td class="font-semibold text-batara-dark">Panel Meranti</td></tr>
+                      <tr><td class="font-medium text-gray-500">Plafond</td><td class="font-semibold text-batara-dark">Gypsum &amp; Rangka Hollow</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kamar Mandi</td><td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td></tr>
+                      <tr><td class="font-medium text-gray-500">Sanitair</td><td class="font-semibold text-batara-dark">Closet Duduk Ex. Oulu</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dapur</td><td class="font-semibold text-batara-dark">Sink &amp; Meja Dapur Beton Termasuk</td></tr>
+                      <tr><td class="font-medium text-gray-500">Carport</td><td class="font-semibold text-batara-dark">Lantai Berkeramik Rapi</td></tr>
+                      <tr><td class="font-medium text-gray-500">Air Bersih</td><td class="font-semibold text-batara-dark">Air Komunal Terjamin</td></tr>
+                      <tr><td class="font-medium text-gray-500">Listrik</td><td class="font-semibold text-batara-dark">PLN 2.200 Watt</td></tr>
+                      <tr><td class="font-medium text-gray-500">Septiktank</td><td class="font-semibold text-batara-dark">Biotank Ramah Lingkungan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Cat Eksterior</td><td class="font-semibold text-batara-dark">Dulux Weathershield</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Komersil%20Amarilys%2030/60."
+                  target="_blank" rel="noopener"
+                  class="btn-primary text-center py-3.5 px-6 text-sm font-syne font-bold flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Tanya Unit Amarilys via WA</span>
+                </a>
+                <a href="#contact"
+                  class="btn-outline text-center py-3.5 px-5 text-sm font-syne font-semibold rounded-full border border-batara-dark text-batara-dark hover:bg-batara-dark hover:text-white transition-all">
+                  Minta Simulasi Cicilan
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================================
+             5. AMARILYS PLUS 30/60 (KOMERSIL PREMIUM PLUS)
+             ========================================================================= -->
+        <article id="amarilys-plus" data-category="komersil"
+          class="tipe-unit-card bg-white rounded-3xl p-6 sm:p-9 lg:p-12 shadow-sm border border-amber-300/80 scroll-mt-28 reveal">
+          
+          <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-gray-100">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3.5 py-1 bg-amber-500 text-white text-xs font-syne font-bold rounded-full shadow-xs flex items-center gap-1.5">
+                <span>👑</span>
+                Komersil Komplit + Pagar
+              </span>
+              <span class="px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-poppins font-medium rounded-full">
+                Granit 60x60 &amp; Meja Dapur
+              </span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-poppins font-medium rounded-full">
+                Pagar Besi Minimalis Siap Pakai
+              </span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-syne font-bold text-batara-dark bg-gray-50 px-3.5 py-1.5 rounded-xl border border-gray-200">
+              <span>LB 30 M²</span>
+              <span class="text-gray-300">/</span>
+              <span>LT 60 M²</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-6">
+            <div class="lg:col-span-6 space-y-5">
+              <div class="flex items-center justify-between">
+                <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
+                  <button type="button" onclick="switchUnitView('amarilys-plus', 'fasad')"
+                    class="btn-view-fasad px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-batara-dark text-white shadow-xs">
+                    Tampak Fasad 3D
+                  </button>
+                  <button type="button" onclick="switchUnitView('amarilys-plus', 'denah')"
+                    class="btn-view-denah px-3.5 py-1.5 text-xs font-syne font-bold rounded-lg transition-all bg-white text-gray-600 hover:bg-gray-100">
+                    Denah Tata Ruang
+                  </button>
+                </div>
+                <button type="button" onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys Plus 30/60')"
+                  class="text-xs font-syne font-bold text-amber-800 hover:text-amber-900 inline-flex items-center gap-1">
+                  <span>Zoom Denah HD</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                </button>
+              </div>
+
+              <div class="unit-fasad-container rounded-2xl overflow-hidden bg-gray-100 border border-gray-100 relative group aspect-[4/3]">
+                <img src="assets/images/house-amarilys-plus.jpg" alt="Rumah Tipe Amarilys Plus Batara Parkview"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-poppins px-3 py-1 rounded-full">
+                  Fasad Amarilys Plus (Termasuk Pagar)
+                </span>
+              </div>
+
+              <div class="unit-denah-container hidden rounded-2xl overflow-hidden bg-[#fafcfa] border border-gray-200 relative aspect-[4/3] flex items-center justify-center p-4 cursor-pointer"
+                onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys Plus 30/60')">
+                <img src="assets/images/denah-amarilys.png" alt="Denah Tipe Amarilys Plus"
+                  class="max-h-full w-auto object-contain hover:scale-105 transition-transform">
+                <span class="absolute bottom-3 right-3 bg-batara-dark/80 text-white text-[11px] font-syne px-3 py-1 rounded-full flex items-center gap-1">
+                  🔍 Klik untuk Perbesar
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 pt-1">
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🛏️</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2 KT</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Kamar</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚪</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Pagar</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Minimalis</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🍳</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Dapur</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">+ Meja Sink</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">✨</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Granit</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">60x60 cm</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">⚡</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">2.200W</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">PLN</span>
+                </div>
+                <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-2.5 text-center">
+                  <span class="block text-base">🚗</span>
+                  <span class="block text-xs font-syne font-bold text-batara-dark mt-1">Carport</span>
+                  <span class="block text-[10px] text-gray-500 font-poppins">Keramik</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <h3 class="font-syne font-extrabold text-3xl sm:text-4xl text-batara-dark tracking-tight">
+                  AMARILYS PLUS
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 mt-1 leading-relaxed">
+                  Tipe paling komplit dan siap huni tanpa renovasi tambahan: sudah dilengkapi pagar depan besi minimalis kokoh, carport keramik, dapur beton, dan granit mewah 60x60.
+                </p>
+              </div>
+
+              <div class="bg-[#faf7f0] border border-[#eee2c6] p-4 sm:p-5 rounded-2xl space-y-2.5">
+                <div class="flex items-baseline justify-between flex-wrap gap-2">
+                  <div>
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-gray-500 font-semibold block">Harga Komplit</span>
+                    <span class="font-syne font-extrabold text-2xl sm:text-3xl text-batara-dark">Mulai Rp 220 Jutaan</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] font-poppins uppercase tracking-wider text-amber-800 font-bold block">Cicilan Fleksibel</span>
+                    <span class="font-syne font-bold text-xl sm:text-2xl text-amber-900">Mulai Rp 1,5 Jt<span class="text-xs font-normal text-gray-600">/bln</span></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-amber-200/70 flex items-center justify-between text-xs font-poppins text-amber-950 font-medium">
+                  <span>✓ Siap Huni Tanpa Renovasi Pagar</span>
+                  <span>✓ Cat Eksterior Dulux Weathershield</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <span class="text-xs font-syne font-bold uppercase tracking-wider text-gray-400 block">Material &amp; Finishing Komplit</span>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins">
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Pagar Depan</span>
+                    <span class="font-semibold text-batara-dark">Pagar Besi Minimalis Termasuk</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Lantai &amp; Pintu</span>
+                    <span class="font-semibold text-batara-dark">Granite Tile 60x60 &amp; Kayu Meranti</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Dapur &amp; Carport</span>
+                    <span class="font-semibold text-batara-dark">Sink Beton &amp; Lantai Keramik</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-gray-50 border border-gray-100">
+                    <span class="text-gray-400 block text-[10px]">Sanitair &amp; Daya Listrik</span>
+                    <span class="font-semibold text-batara-dark">Closet Duduk Oulu &amp; 2.200 Watt</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" onclick="toggleUnitSpecs('amarilys-plus-specs', this)"
+                  class="w-full py-2.5 px-4 rounded-xl bg-gray-50 hover:bg-amber-50/70 border border-gray-200 transition-all flex items-center justify-between text-xs font-syne font-bold text-batara-dark cursor-pointer group">
+                  <span class="spec-toggle-text">Lihat 18 Spesifikasi Komersil Lengkap</span>
+                  <span class="spec-toggle-arrow transform transition-transform text-gray-400 group-hover:text-batara-dark">▾</span>
+                </button>
+
+                <div id="amarilys-plus-specs" class="hidden mt-3 overflow-x-auto rounded-xl border border-gray-100">
+                  <table class="w-full text-left spec-table text-xs">
+                    <tbody class="divide-y divide-gray-100">
+                      <tr><td class="font-medium text-gray-500 w-1/3">Pondasi</td><td class="font-semibold text-batara-dark">Batu Kali</td></tr>
+                      <tr><td class="font-medium text-gray-500">Struktur</td><td class="font-semibold text-batara-dark">Beton Bertulang</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dinding</td><td class="font-semibold text-batara-dark">Batako Diplester Aci &amp; Cat</td></tr>
+                      <tr><td class="font-medium text-gray-500">Lantai</td><td class="font-semibold text-batara-dark">Granite Tile 60x60 cm</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pagar</td><td class="font-semibold text-batara-dark">Pagar Besi Minimalis Termasuk</td></tr>
+                      <tr><td class="font-medium text-gray-500">Rangka Atap</td><td class="font-semibold text-batara-dark">Baja Ringan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Atap</td><td class="font-semibold text-batara-dark">Genteng Beton Ex. Monier</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kusen</td><td class="font-semibold text-batara-dark">Alumunium</td></tr>
+                      <tr><td class="font-medium text-gray-500">Pintu Utama</td><td class="font-semibold text-batara-dark">Panel Meranti</td></tr>
+                      <tr><td class="font-medium text-gray-500">Plafond</td><td class="font-semibold text-batara-dark">Gypsum &amp; Rangka Hollow</td></tr>
+                      <tr><td class="font-medium text-gray-500">Kamar Mandi</td><td class="font-semibold text-batara-dark">Keramik &amp; Pintu PVC</td></tr>
+                      <tr><td class="font-medium text-gray-500">Sanitair</td><td class="font-semibold text-batara-dark">Closet Duduk Ex. Oulu</td></tr>
+                      <tr><td class="font-medium text-gray-500">Dapur</td><td class="font-semibold text-batara-dark">Sink &amp; Meja Dapur Beton Termasuk</td></tr>
+                      <tr><td class="font-medium text-gray-500">Carport</td><td class="font-semibold text-batara-dark">Lantai Berkeramik Rapi</td></tr>
+                      <tr><td class="font-medium text-gray-500">Air Bersih</td><td class="font-semibold text-batara-dark">Air Komunal Terjamin</td></tr>
+                      <tr><td class="font-medium text-gray-500">Listrik</td><td class="font-semibold text-batara-dark">PLN 2.200 Watt</td></tr>
+                      <tr><td class="font-medium text-gray-500">Septiktank</td><td class="font-semibold text-batara-dark">Biotank Ramah Lingkungan</td></tr>
+                      <tr><td class="font-medium text-gray-500">Cat Eksterior</td><td class="font-semibold text-batara-dark">Dulux Weathershield</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Komersil%20Amarilys%20Plus%2030/60."
+                  target="_blank" rel="noopener"
+                  class="btn-primary text-center py-3.5 px-6 text-sm font-syne font-bold flex items-center justify-center gap-2 flex-1 shadow-md hover:shadow-lg">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>Tanya Unit Amarilys Plus via WA</span>
+                </a>
+                <a href="#contact"
+                  class="btn-outline text-center py-3.5 px-5 text-sm font-syne font-semibold rounded-full border border-batara-dark text-batara-dark hover:bg-batara-dark hover:text-white transition-all">
+                  Minta Simulasi Cicilan
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =========================================================================
+             6. TABEL PERBANDINGAN TIPE UNIT (COMPARISON MATRIX)
+             ========================================================================= -->
+        <div id="tabel-perbandingan"
+          class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-sm scroll-mt-28 reveal space-y-6">
+          <div class="flex items-center justify-between flex-wrap gap-4 border-b border-gray-100 pb-5">
+            <div>
+              <span class="text-xs font-syne font-bold uppercase tracking-wider text-batara-dark bg-batara-lime/30 px-3 py-1 rounded-full">
+                Perbandingan Lengkap
+              </span>
+              <h3 class="font-syne font-bold text-2xl sm:text-3xl text-batara-dark mt-2">
+                Tabel Komparasi Fitur &amp; Spesifikasi
+              </h3>
+            </div>
+            <p class="text-xs sm:text-sm font-poppins text-gray-500 max-w-sm">
+              Bandingkan fitur spesifik tiap tipe unit untuk menemukan hunian yang paling sesuai dengan kebutuhan keluarga Anda.
+            </p>
+          </div>
+
+          <div class="overflow-x-auto rounded-2xl border border-gray-100">
+            <table class="w-full text-left matrix-table">
+              <thead>
+                <tr>
+                  <th class="w-1/4">Fitur / Spesifikasi</th>
+                  <th class="text-center">Kalmia</th>
+                  <th class="text-center">Krisan</th>
+                  <th class="text-center">Daisy</th>
+                  <th class="text-center bg-amber-900 text-amber-200">Amarilys</th>
+                  <th class="text-center bg-amber-950 text-amber-300">Amarilys Plus</th>
+                </tr>
+              </thead>
+              <tbody class="font-poppins">
+                <tr>
+                  <td class="font-semibold text-batara-dark">Kategori Unit</td>
+                  <td class="text-center text-xs"><span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-md font-semibold">Subsidi FLPP</span></td>
+                  <td class="text-center text-xs"><span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-md font-semibold">Subsidi FLPP</span></td>
+                  <td class="text-center text-xs"><span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded-md font-semibold">Subsidi FLPP</span></td>
+                  <td class="text-center text-xs bg-amber-50/50"><span class="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-md font-bold">Komersil</span></td>
+                  <td class="text-center text-xs bg-amber-50/70"><span class="px-2 py-0.5 bg-amber-500 text-white rounded-md font-bold">Komersil+</span></td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Luas Bangunan / Tanah</td>
+                  <td class="text-center text-xs">30 / 60 M²</td>
+                  <td class="text-center text-xs">30 / 60 M²</td>
+                  <td class="text-center text-xs">30 / 60 M²</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-semibold">30 / 60 M²</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-semibold">30 / 60 M²</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Lantai Utama</td>
+                  <td class="text-center text-xs">Keramik 40x40</td>
+                  <td class="text-center text-xs">Keramik 40x40</td>
+                  <td class="text-center text-xs">Keramik 40x40</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-bold text-amber-900">Granit 60x60</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-bold text-amber-900">Granit 60x60</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Pintu Utama</td>
+                  <td class="text-center text-xs">Double Multiplek</td>
+                  <td class="text-center text-xs">Double Multiplek</td>
+                  <td class="text-center text-xs">Double Multiplek</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-semibold text-amber-900">Panel Meranti</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-semibold text-amber-900">Panel Meranti</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Plafon Ruang Tamu</td>
+                  <td class="text-center text-xs font-semibold text-emerald-800">Drop Ceiling Gypsum</td>
+                  <td class="text-center text-xs">GRC Hollow</td>
+                  <td class="text-center text-xs">GRC Hollow</td>
+                  <td class="text-center text-xs bg-amber-50/50">Gypsum Hollow</td>
+                  <td class="text-center text-xs bg-amber-50/70">Gypsum Hollow</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Kamar Mandi / Sanitair</td>
+                  <td class="text-center text-xs">Closet Jongkok</td>
+                  <td class="text-center text-xs">Closet Jongkok</td>
+                  <td class="text-center text-xs">Closet Jongkok</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-semibold text-amber-900">Closet Duduk Oulu</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-semibold text-amber-900">Closet Duduk Oulu</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Meja Dapur &amp; Sink</td>
+                  <td class="text-center text-xs text-gray-400">Siap Dibuat</td>
+                  <td class="text-center text-xs text-gray-400">Siap Dibuat</td>
+                  <td class="text-center text-xs text-gray-400">Siap Dibuat</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-bold text-emerald-700">✓ Sudah Terpasang</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-bold text-emerald-700">✓ Sudah Terpasang</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Pagar Depan Besi</td>
+                  <td class="text-center text-xs text-gray-400">-</td>
+                  <td class="text-center text-xs text-gray-400">-</td>
+                  <td class="text-center text-xs text-gray-400">-</td>
+                  <td class="text-center text-xs bg-amber-50/50 text-gray-400">-</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-extrabold text-amber-950">✓ Termasuk Pagar</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold text-batara-dark">Daya Listrik PLN</td>
+                  <td class="text-center text-xs">1.300 Watt</td>
+                  <td class="text-center text-xs">1.300 Watt</td>
+                  <td class="text-center text-xs">1.300 Watt</td>
+                  <td class="text-center text-xs bg-amber-50/50 font-semibold">2.200 Watt</td>
+                  <td class="text-center text-xs bg-amber-50/70 font-semibold">2.200 Watt</td>
+                </tr>
+                <tr class="bg-gray-50/80">
+                  <td class="font-bold text-batara-dark">Estimasi Cicilan KPR</td>
+                  <td class="text-center text-xs font-bold text-emerald-800">Mulai 1,1 Jt/bln</td>
+                  <td class="text-center text-xs font-bold text-emerald-800">Mulai 1,1 Jt/bln</td>
+                  <td class="text-center text-xs font-bold text-emerald-800">Mulai 1,1 Jt/bln</td>
+                  <td class="text-center text-xs bg-amber-100/60 font-bold text-amber-900">Mulai 1,4 Jt/bln</td>
+                  <td class="text-center text-xs bg-amber-200/70 font-extrabold text-amber-950">Mulai 1,5 Jt/bln</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
         <!-- SECTION INFORMASI & PENJUALAN (LEAD FORM) -->
         <!-- SECTION INFORMASI & PENJUALAN (LEAD FORM) -->
@@ -1166,7 +1507,7 @@
         <!-- FLOATING WHATSAPP INTERACTIVE WIDGET       -->
         <!-- ========================================== -->
         <div
-          class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-none select-none">
+          class="wa-floating-btn-container fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-none select-none">
           <!-- WhatsApp Popover Chat Window -->
           <div id="waPopover"
             class="wa-hidden pointer-events-auto w-[calc(100vw-2rem)] max-w-[340px] sm:max-w-[360px] mb-3 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-emerald-100 overflow-hidden">
@@ -1366,7 +1707,7 @@
               </a>
 
               <!-- Item 5: Kontak / WhatsApp -->
-              <button type="button" onclick="sendWaMessage('default')" class="mobile-nav-link cursor-pointer" aria-label="Hubungi WhatsApp Marketing">
+              <button type="button" onclick="if(window.toggleWaPopover){window.toggleWaPopover();}else{sendWaMessage('default');}" class="mobile-nav-link cursor-pointer" aria-label="Hubungi WhatsApp Marketing">
                 <span class="nav-dash-indicator"></span>
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
