@@ -229,20 +229,21 @@ function sendWaMessage(topic) {
    ========================================================================== */
 window.MONTHLY_PROMO_CONFIG = {
   enabled: true, // Ubah ke false jika ingin menonaktifkan pop up promo
-  promoId: 'promo-oktober-2026', // Ganti ID ini setiap awal bulan agar promo otomatis muncul lagi ke pengunjung baru
-  badge: 'Promo Spesial',
-  title: 'Promo Spesial Batara Parkview',
-  subtitle: 'Wujudkan hunian hijau mandiri cuma selangkah ke Stasiun Cikoya.',
-  bannerImage: 'assets/images/hero-banner-real.jpg', // Gambar flyer/banner promo bulanan
+  promoId: 'promo-shocktober-2026', // ID promo SHOCKTOBER
+  badge: '✨ SHOCKTOBER 2026',
+  title: '✨ SHOCKTOBER Batara Parkview',
+  subtitle: '“Oktober Ini, Waktunya Punya Rumah!” Saatnya miliki hunian strategis tipe komersil.',
+  bannerImage: 'assets/images/promo-shocktober.jpg', // Gambar flyer SHOCKTOBER
   benefits: [
-    'DP 0% — Bebas Uang Muka',
-    'Bebas Biaya KPR, BPHTB & Notaris',
-    'Cukup Booking Fee Rp 1 Juta',
-    'Bonus Smart Door Lock & Subsidi'
+    'Cukup Bayar 3 Jt All In',
+    'Cicilan Mulai 1,8 Juta / Bulan',
+    'Beli Rumah Dapat AC & Kanopi',
+    'Subsidi Bunga 2% • Free SHM',
+    'Unit Terdepan Selangkah ke Stasiun'
   ],
-  ctaText: 'Klaim Promo via WA',
-  whatsappMessage: 'Halo Marketing Batara Parkview, saya melihat Promo Spesial di website dan ingin konsultasi serta mengklaim promonya.',
-  periodNote: 'Batara Parkview • Kuota Terbatas Bulan Ini'
+  ctaText: 'Klaim Promo SHOCKTOBER via WA',
+  whatsappMessage: 'Halo Marketing Batara Parkview, saya melihat Promo SHOCKTOBER di website (Cukup Bayar 3 Jt All In, Cicilan 1.8 Jt/bln, Bonus AC & Kanopi). Saya ingin konsultasi dan klaim promonya.',
+  periodNote: 'Periode Booking: 1 - 31 Oktober 2026 • Tipe Komersil'
 };
 
 // Open Promo Modal Function
@@ -260,8 +261,9 @@ window.closePromoModal = function(dontShowAgain = false) {
   if (modal) {
     modal.classList.add('hidden');
     document.body.style.overflow = '';
+    const promoId = (window.MONTHLY_PROMO_CONFIG && window.MONTHLY_PROMO_CONFIG.promoId) ? window.MONTHLY_PROMO_CONFIG.promoId : 'shocktober';
     if (dontShowAgain) {
-      sessionStorage.setItem('promo_closed_session', 'true');
+      sessionStorage.setItem('promo_closed_' + promoId, 'true');
     }
   }
 };
@@ -271,7 +273,7 @@ window.claimMonthlyPromo = function() {
   const phone = '6281234567890';
   const msg = (window.MONTHLY_PROMO_CONFIG && window.MONTHLY_PROMO_CONFIG.whatsappMessage) 
     ? window.MONTHLY_PROMO_CONFIG.whatsappMessage 
-    : 'Halo Marketing Batara Parkview, saya ingin klaim Promo Spesial Batara Parkview!';
+    : 'Halo Marketing Batara Parkview, saya ingin klaim Promo SHOCKTOBER Batara Parkview!';
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
   window.closePromoModal();
 };
@@ -292,7 +294,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (badgeEl) badgeEl.textContent = cfg.badge;
     if (titleEl) titleEl.textContent = cfg.title;
     if (subtitleEl) subtitleEl.textContent = cfg.subtitle;
-    if (imgEl && cfg.bannerImage) imgEl.src = cfg.bannerImage;
+    if (imgEl && cfg.bannerImage) {
+      imgEl.src = cfg.bannerImage;
+      imgEl.alt = 'Flyer ' + cfg.title;
+    }
     if (noteEl) noteEl.textContent = cfg.periodNote;
     if (ctaBtnEl) {
       const ctaSpan = ctaBtnEl.querySelector('.cta-text');
@@ -305,15 +310,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (benefitsListEl && cfg.benefits) {
       benefitsListEl.innerHTML = cfg.benefits.map(b => 
-        `<li class="flex items-center gap-2 text-xs text-batara-dark font-medium font-poppins bg-white/90 py-1.5 px-2.5 rounded-xl border border-gray-100 shadow-xs">
-          <span class="w-4 h-4 rounded-full bg-batara-lime/30 text-batara-dark flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
-          <span class="truncate">${b.replace(/^[^\w\s]+/, '').trim()}</span>
+        `<li class="flex items-center gap-2 text-xs text-batara-dark font-semibold font-poppins bg-white py-1.5 px-3 rounded-xl border border-gray-100 shadow-xs">
+          <span class="w-4 h-4 rounded-full bg-batara-lime/40 text-batara-dark flex items-center justify-center text-[10px] font-bold flex-shrink-0">✓</span>
+          <span class="truncate">${b}</span>
         </li>`
       ).join('');
     }
 
     // Auto show promo modal automatically whenever website is opened (800ms delay)
-    const isDismissedSession = sessionStorage.getItem('promo_closed_session');
+    const promoKey = 'promo_closed_' + (cfg.promoId || 'shocktober');
+    const isDismissedSession = sessionStorage.getItem(promoKey);
     if (!isDismissedSession) {
       setTimeout(() => {
         window.openPromoModal();
