@@ -54,6 +54,15 @@ a, button {
   background: #15311e;
 }
 
+/* Hide scrollbar for clean modals and carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Navigation active pill */
 .nav-link {
   font-family: var(--font-heading);
