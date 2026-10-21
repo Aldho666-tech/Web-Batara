@@ -89,35 +89,31 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE CATEGORY FILTER & QUICK JUMP BAR -->
-    <div class="sticky top-[52px] sm:top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200/80 py-3">
-      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <!-- Category Segmented Filter Tabs -->
-        <div class="flex items-center gap-1 p-1 bg-gray-100 rounded-xl flex-shrink-0">
+    <!-- INTERACTIVE CATEGORY FILTER & DIRECT COMPARISON -->
+    <div class="sticky top-[52px] sm:top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-200/70 py-3">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 flex items-center justify-between gap-4">
+        <!-- Minimal Segmented Filter Tabs -->
+        <div class="inline-flex p-1 bg-gray-100 rounded-xl gap-1">
           <button type="button" onclick="filterTipeRumah('all', this)"
-            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-batara-dark text-white">
+            class="tipe-filter-btn px-4 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-batara-dark text-white shadow-xs">
             Semua Unit (5)
           </button>
           <button type="button" onclick="filterTipeRumah('subsidi', this)"
-            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-transparent text-gray-600 hover:text-batara-dark">
+            class="tipe-filter-btn px-4 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-transparent text-gray-600 hover:text-batara-dark">
             Subsidi FLPP (3)
           </button>
           <button type="button" onclick="filterTipeRumah('komersil', this)"
-            class="tipe-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-transparent text-gray-600 hover:text-batara-dark">
+            class="tipe-filter-btn px-4 py-1.5 rounded-lg text-xs font-syne font-semibold transition-all bg-transparent text-gray-600 hover:text-batara-dark">
             Komersil Premium (2)
           </button>
         </div>
 
-        <!-- Direct Unit Jump Links -->
-        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 text-xs font-poppins">
-          <span class="text-gray-400 text-[11px] uppercase tracking-wider flex-shrink-0 mr-1 hidden lg:inline">Lompat:</span>
-          <a href="#kalmia" class="quick-pill">Kalmia</a>
-          <a href="#krisan" class="quick-pill">Krisan</a>
-          <a href="#daisy" class="quick-pill">Daisy</a>
-          <a href="#amarilys" class="quick-pill">Amarilys</a>
-          <a href="#amarilys-plus" class="quick-pill">Amarilys+</a>
-          <a href="#tabel-perbandingan" class="quick-pill border-gray-300 text-batara-dark font-medium">Tabel Komparasi</a>
-        </div>
+        <!-- Clean Text Link to Matrix -->
+        <a href="#tabel-perbandingan"
+          class="hidden sm:inline-flex items-center gap-1.5 text-xs font-syne font-semibold text-batara-dark hover:text-batara-green transition-colors">
+          <span>Bandingkan Spesifikasi</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -127,22 +123,17 @@
     <section class="py-12 sm:py-20 lg:py-24 bg-[#fbfbfb]">
       <div class="max-w-[1200px] mx-auto px-4 sm:px-10 lg:px-16 space-y-12 sm:space-y-16">
         
-        <!-- Page Title Header -->
-        <div class="border-b border-gray-200 pb-8 flex items-end justify-between flex-wrap gap-4 reveal">
-          <div class="space-y-2 max-w-xl">
-            <span class="text-[11px] font-syne font-semibold uppercase tracking-wider text-batara-dark bg-gray-100 px-3 py-1 rounded-full inline-block">
-              Koleksi Unit Hunian TOD
-            </span>
-            <h2 class="font-syne font-bold text-3xl sm:text-4xl text-batara-dark tracking-tight leading-tight">
-              Pilihan Tipe Rumah Modern Tropis
-            </h2>
-            <p class="text-sm font-poppins text-gray-600 leading-relaxed pt-1">
-              Setiap unit dirancang dengan arsitektur pencahayaan alami, plafon tinggi sirkulasi sejuk, dan kemudahan fasilitas transit Stasiun KRL Cikoya.
-            </p>
-          </div>
-          <div class="text-xs font-poppins text-gray-500 bg-white px-4 py-2.5 rounded-xl border border-gray-200 shadow-2xs">
-            <span class="font-semibold text-batara-dark">Tipe 30/60</span> · 2 KT &amp; 1 KM · Carport · Air Komunal
-          </div>
+        <!-- Page Title Header (Minimalist Editorial) -->
+        <div class="border-b border-gray-200/80 pb-6 reveal">
+          <span class="text-xs uppercase tracking-widest font-syne font-semibold text-batara-green block mb-2">
+            Koleksi Unit Hunian TOD
+          </span>
+          <h1 class="font-syne font-bold text-3xl sm:text-4xl lg:text-5xl text-batara-dark tracking-tight leading-tight">
+            Pilihan Tipe Rumah Modern Tropis
+          </h1>
+          <p class="text-sm sm:text-base font-poppins text-gray-500 max-w-2xl mt-2 leading-relaxed">
+            Dirancang dengan arsitektur ramah pencahayaan alami, plafon tinggi sirkulasi sejuk, dan kemudahan akses ke Stasiun KRL Cikoya.
+          </p>
         </div>
 
         <!-- =========================================================================
