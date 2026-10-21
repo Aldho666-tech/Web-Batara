@@ -1,0 +1,43 @@
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large design source files & PDFs
+WEB2.pdf
+*.pdf
+HOME PAGE/
+Section 2 Home Page/
+Section 3 Homepage/
+Section 4 Form/
+TENTANG KAMI/
+Testimony/
+preview_orig/
+preview_pages/
+preview_sections/
+check_top_clean.png
+
+# Raw unused image dumps & extractions (not referenced in website)
+assets/page2_pdf_images/
+assets/sections/
+assets/sections_rendered/
+assets/tentang_kami_images/TENTANG_KAMI-*
+assets/img/img_p*
+assets/section_images/HOME_PAGE-01*
+assets/section_images/HOME_PAGE-02*
+assets/section_images/HOME_PAGE-03*
+assets/section_images/HOME_PAGE-05*
+assets/section_images/HOME_PAGE-06*
+
+# IDE & temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Netlify local cache
+.netlify/

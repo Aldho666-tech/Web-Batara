@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batara Parkview — Hunian Hijau Mandiri, Cukup Jalan Kaki ke Stasiun</title>
+  <meta name="description"
+    content="Batara Parkview adalah hunian berkonsep Transit-Oriented Development (TOD) di Kabupaten Tangerang. Cukup jalan kaki ke Stasiun Cikoya. Proyek persembahan Badak Perkasa Group.">
+  <meta name="keywords"
+    content="Batara Parkview, Rumah Murah Tangerang, Rumah Subsidi Cikoya, Badak Perkasa Group, TOD Cikoya">
+
+  <!-- Google Fonts: Google Sans (Plus Jakarta Sans), Poppins & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600;1,700;1,800&family=Syne:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            batara: {
+              dark: '#15311e',
+              forest: '#14301e',
+              lime: '#86cf5e',
+              limeDark: '#72b64d',
+              sage: '#e8eeeb',
+              cream: '#f4f4f4',
+              light: '#f1f1f1',
+              muted: '#6b7b70',
+              gray: '#97a099',
+            }
+          },
+          fontFamily: {
+            syne: ['"Google Sans"', '"Plus Jakarta Sans"', 'Syne', 'sans-serif'],
+            heading: ['"Google Sans"', '"Plus Jakarta Sans"', 'Syne', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white text-batara-dark antialiased font-poppins selection:bg-batara-lime selection:text-batara-dark">
+
+  <!-- NAVBAR (Identical across all tabs) -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm rounded-b-[20px] sm:rounded-b-[28px] transition-all">
+    <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 py-2 sm:py-2.5 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2" id="nav-logo">
+        <img src="assets/images/logo.svg" alt="Batara Parkview Logo" class="h-8 sm:h-11 md:h-12 w-auto object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-6 lg:space-x-9">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="tentang-kami.html" class="nav-link">Tentang Kami</a>
+        <a href="tipe-rumah.html" class="nav-link">Tipe Rumah</a>
+        <a href="artikel.html" class="nav-link">Artikel</a>
+        <a href="#contact"
+          class="bg-batara-dark text-white font-syne font-semibold text-sm sm:text-base px-6 py-2 rounded-xl hover:bg-batara-lime hover:text-batara-dark transition-all shadow-sm">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-batara-dark p-1.5 focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/60 z-50 hidden flex flex-col justify-end">
+    <div class="bg-white rounded-t-3xl p-6 sm:p-8 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-100">
+        <img src="assets/images/logo.svg" alt="Batara Parkview" class="h-9 w-auto">
+        <button id="mobile-menu-close" class="text-gray-500 p-2" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-3 pt-2">
+        <a href="index.html" class="text-lg font-syne font-bold text-batara-dark py-2 border-b border-gray-50">Home</a>
+        <a href="tentang-kami.html"
+          class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Tentang Kami</a>
+        <a href="tipe-rumah.html" class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Tipe
+          Rumah</a>
+        <a href="artikel.html"
+          class="text-lg font-syne font-medium text-gray-700 py-2 border-b border-gray-50">Artikel</a>
+        <a href="#contact" class="text-lg font-syne font-medium text-gray-700 py-2">Contact</a>
+      </nav>
+      <div class="pt-4">
+        <a href="#contact" class="btn-primary w-full text-center">Hubungi Marketing</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- 1. HERO BANNER SECTION (HD, Shifted Up)    -->
+    <!-- ========================================== -->
+    <section class="relative bg-batara-dark overflow-hidden w-full -mt-4 sm:-mt-6 md:-mt-7 z-0">
+      <div class="w-full relative">
+        <img src="assets/images/hero-banner-real.jpg"
+          alt="Batara Parkview — Hunian Hijau Mandiri, Cukup Jalan Kaki ke Stasiun"
+          class="w-full h-auto aspect-[16/9] sm:aspect-[2410/1214] object-cover object-center block shadow-md"
+          loading="eager" fetchpriority="high">
+
+        <!-- Accessible semantic heading for SEO -->
+        <h1 class="sr-only">Batara Parkview — Hunian Hijau Mandiri, Cukup Jalan Kaki ke Stasiun #BantuTemanPunyaRumah
+        </h1>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. SECTION TENTANG KAMI                    -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="tentang-kami">
+      <!-- Background Monstera Leaves Framing (from Figma Clip path group.svg) -->
+      <div class="absolute inset-0 pointer-events-none select-none z-0 hidden lg:block opacity-90">
+        <img src="assets/images/section2/Clip path group.svg" alt="" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Container with comfortable left and right gap padding -->
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          <!-- Left: 4 Facility Squircle Cards (Full Natural Ratio from Figma) -->
+          <div class="lg:col-span-6">
+            <div class="grid grid-cols-2 gap-4 sm:gap-5 max-w-lg mx-auto lg:max-w-none">
+              <!-- Masjid -->
+              <div class="overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                <img src="assets/images/section2/Clip path group-1.svg" alt="Masjid Jami' Nurul Hidayah Batara Parkview"
+                  class="w-full h-auto block">
+              </div>
+              <!-- Taman 06 Express -->
+              <div class="overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                <img src="assets/images/section2/Clip path group-2.svg" alt="Taman 06 Express Batara Parkview"
+                  class="w-full h-auto block">
+              </div>
+              <!-- Playground -->
+              <div class="overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                <img src="assets/images/section2/Clip path group-3.svg" alt="Playground Ramah Anak Batara Parkview"
+                  class="w-full h-auto block">
+              </div>
+              <!-- Badminton Court -->
+              <div class="overflow-hidden hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                <img src="assets/images/section2/Clip path group-4.svg" alt="Lapangan Badminton Batara Parkview"
+                  class="w-full h-auto block">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Typography & Official Content from Figma -->
+          <div class="lg:col-span-6 space-y-6">
+            <!-- Vector Title 'Tentang Kami' from Figma -->
+            <div>
+              <img src="assets/images/section2/Tentang Kami.svg" alt="Tentang Kami"
+                class="h-8 sm:h-10 md:h-12 w-auto object-contain">
+              <h2 class="sr-only">Tentang Kami</h2>
+            </div>
+
+            <!-- Body Paragraph -->
+            <p class="font-poppins text-gray-700 text-base sm:text-lg leading-relaxed">
+              Kebutuhan akan hunian yang terjangkau sekaligus terhubung dengan transportasi publik kini menjadi
+              prioritas, khususnya bagi generasi Millenial dan Zillenial. Menjawab kebutuhan tersebut, Batara Parkview
+              hadir sebagai solusi hunian masa kini dengan konsep Transit-Oriented Development (TOD) di Kabupaten
+              Tangerang.
+            </p>
+
+            <!-- Vector Button 'Selengkapnya' from Figma -->
+            <div class="pt-2">
+              <a href="tentang-kami.html"
+                class="inline-block hover:scale-105 hover:brightness-110 transition-all duration-200 shadow-md rounded-md">
+                <img src="assets/images/section2/Group.svg" alt="Selengkapnya" class="h-10 sm:h-11 md:h-12 w-auto">
+              </a>
+            </div>
+
+            <!-- Vector Logo '#BantuTemanPunyaRumah' from Figma -->
+            <div class="pt-4 sm:pt-6">
+              <img src="assets/images/section2/Group-2.svg" alt="#BantuTemanPunyaRumah"
+                class="h-11 sm:h-14 md:h-16 w-auto object-contain">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. SECTION TYPE RUMAH (Figma Section 3)    -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 lg:py-24 bg-[#0d2214] text-white relative overflow-hidden" id="tipe-rumah">
+      <!-- Background Monstera Leaves Framing from Figma -->
+      <div class="absolute inset-0 pointer-events-none select-none z-0 hidden lg:block opacity-90">
+        <img src="assets/images/section3/Clip path group.svg" alt="" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Container with comfortable left and right gap padding -->
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 relative z-10">
+
+        <!-- Title Header (Figma Vectors) -->
+        <div class="space-y-2.5 text-center mb-10 sm:mb-12">
+          <div>
+            <img src="assets/images/section3/Type Rumah.svg" alt="Type Rumah"
+              class="h-8 sm:h-10 md:h-11 w-auto object-contain inline-block">
+            <h2 class="sr-only">Type Rumah</h2>
+          </div>
+          <div>
+            <img src="assets/images/section3/Pilih rumah impianmu dan sesuaikan kebutuhanmu.svg"
+              alt="Pilih rumah impianmu dan sesuaikan kebutuhanmu"
+              class="h-4 sm:h-5 md:h-6 w-auto object-contain inline-block opacity-95">
+          </div>
+        </div>
+
+        <!-- 5 Interactive House Cards Grid (Clean, Minimalist, Anti AI-Slop) -->
+        <div id="houseCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
+
+          <!-- Card 1: Kalmia -->
+          <div data-category="subsidi"
+            class="house-card bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-gray-100 flex flex-col text-batara-dark transition-all duration-300">
+            <div class="relative overflow-hidden bg-gray-50 p-2 sm:p-2.5">
+              <img src="assets/images/house-kalmia.jpg" alt="Rumah Tipe Kalmia Batara Parkview"
+                class="w-full h-[220px] sm:h-[235px] object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500">
+              <span
+                class="absolute top-4 left-4 bg-batara-lime text-batara-dark font-poppins text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                Favorit
+              </span>
+              <span
+                class="absolute top-4 right-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe 30/60
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-3">
+                  <h3 class="font-syne font-bold text-2xl text-batara-dark">
+                    Kalmia
+                  </h3>
+                  <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">
+                    Subsidi FLPP
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins mb-4">
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Carport Luas
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Ruang Tamu
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    2 Kamar Tidur
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Kamar Mandi
+                  </span>
+                  <span
+                    class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium col-span-2">
+                    Ceiling Tinggi &amp; Sejuk
+                  </span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] text-gray-400 block font-medium">Harga Mulai</span>
+                    <span class="text-base font-syne font-bold text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] text-emerald-700 block font-semibold">Cicilan Mulai</span>
+                    <span class="text-base font-syne font-bold text-emerald-800">Rp 1.1 Jt<span
+                        class="text-xs font-normal">/bln</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-gray-100 flex items-center gap-2">
+                <button type="button" onclick="openDenahModal('assets/images/denah-kalmia.jpg', 'Kalmia')"
+                  class="flex-1 bg-gray-100 hover:bg-gray-200 text-batara-dark font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center cursor-pointer">
+                  Denah
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Kalmia."
+                  target="_blank" rel="noopener"
+                  class="flex-1 bg-batara-dark hover:bg-batara-lime hover:text-batara-dark text-white font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center shadow-xs">
+                  Tanya Unit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Krisan -->
+          <div data-category="subsidi"
+            class="house-card bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-gray-100 flex flex-col text-batara-dark transition-all duration-300">
+            <div class="relative overflow-hidden bg-gray-50 p-2 sm:p-2.5">
+              <img src="assets/img/KRISAN.svg" alt="Rumah Tipe Krisan Batara Parkview"
+                class="w-full h-[220px] sm:h-[235px] object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500">
+              <span
+                class="absolute top-4 left-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-3 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Desain Minimalis
+              </span>
+              <span
+                class="absolute top-4 right-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe 30/60
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-3">
+                  <h3 class="font-syne font-bold text-2xl text-batara-dark">
+                    Krisan
+                  </h3>
+                  <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">
+                    Subsidi FLPP
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins mb-4">
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Carport
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Ruang Tamu
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    2 Kamar Tidur
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Kamar Mandi
+                  </span>
+                  <span
+                    class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium col-span-2">
+                    Dapur Terbuka Belakang
+                  </span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] text-gray-400 block font-medium">Harga Mulai</span>
+                    <span class="text-base font-syne font-bold text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] text-emerald-700 block font-semibold">Cicilan Mulai</span>
+                    <span class="text-base font-syne font-bold text-emerald-800">Rp 1.1 Jt<span
+                        class="text-xs font-normal">/bln</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-gray-100 flex items-center gap-2">
+                <button type="button" onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Krisan')"
+                  class="flex-1 bg-gray-100 hover:bg-gray-200 text-batara-dark font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center cursor-pointer">
+                  Denah
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Krisan."
+                  target="_blank" rel="noopener"
+                  class="flex-1 bg-batara-dark hover:bg-batara-lime hover:text-batara-dark text-white font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center shadow-xs">
+                  Tanya Unit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Daisy -->
+          <div data-category="subsidi"
+            class="house-card bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-gray-100 flex flex-col text-batara-dark transition-all duration-300">
+            <div class="relative overflow-hidden bg-gray-50 p-2 sm:p-2.5">
+              <img src="assets/images/house-daisy.jpg" alt="Rumah Tipe Daisy Batara Parkview"
+                class="w-full h-[220px] sm:h-[235px] object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500">
+              <span
+                class="absolute top-4 left-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-3 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Hunian Asri
+              </span>
+              <span
+                class="absolute top-4 right-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe 30/60
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-3">
+                  <h3 class="font-syne font-bold text-2xl text-batara-dark">
+                    Daisy
+                  </h3>
+                  <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">
+                    Subsidi FLPP
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins mb-4">
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Carport
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Ruang Tamu
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    2 Kamar Tidur
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    1 Kamar Mandi
+                  </span>
+                  <span
+                    class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium col-span-2">
+                    Taman Depan &amp; Belakang
+                  </span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] text-gray-400 block font-medium">Harga Mulai</span>
+                    <span class="text-base font-syne font-bold text-batara-dark">Rp 185 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] text-emerald-700 block font-semibold">Cicilan Mulai</span>
+                    <span class="text-base font-syne font-bold text-emerald-800">Rp 1.1 Jt<span
+                        class="text-xs font-normal">/bln</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-gray-100 flex items-center gap-2">
+                <button type="button" onclick="openDenahModal('assets/images/denah-krisan.jpg', 'Daisy')"
+                  class="flex-1 bg-gray-100 hover:bg-gray-200 text-batara-dark font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center cursor-pointer">
+                  Denah
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Daisy."
+                  target="_blank" rel="noopener"
+                  class="flex-1 bg-batara-dark hover:bg-batara-lime hover:text-batara-dark text-white font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center shadow-xs">
+                  Tanya Unit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Amarilys -->
+          <div data-category="komersil"
+            class="house-card bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-gray-100 flex flex-col text-batara-dark transition-all duration-300">
+            <div class="relative overflow-hidden bg-gray-50 p-2 sm:p-2.5">
+              <img src="assets/images/house-amarilys.jpg" alt="Rumah Tipe Amarilys Batara Parkview"
+                class="w-full h-[220px] sm:h-[235px] object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500">
+              <span
+                class="absolute top-4 left-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-3 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Komersil
+              </span>
+              <span
+                class="absolute top-4 right-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe 30/60
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-3">
+                  <h3 class="font-syne font-bold text-2xl text-batara-dark">
+                    Amarilys
+                  </h3>
+                  <span class="text-xs font-semibold text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md">
+                    Komersil Modern
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins mb-4">
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Carport Luas
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Ruang Keluarga
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    2 Kamar Tidur
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Dapur Tertutup
+                  </span>
+                  <span
+                    class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium col-span-2">
+                    Ceiling Mewah &amp; Tanah 72m²
+                  </span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] text-gray-400 block font-medium">Harga Mulai</span>
+                    <span class="text-base font-syne font-bold text-batara-dark">Rp 299 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] text-blue-700 block font-semibold">Cicilan Mulai</span>
+                    <span class="text-base font-syne font-bold text-blue-800">Rp 1.8 Jt<span
+                        class="text-xs font-normal">/bln</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-gray-100 flex items-center gap-2">
+                <button type="button" onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys 30/60')"
+                  class="flex-1 bg-gray-100 hover:bg-gray-200 text-batara-dark font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center cursor-pointer">
+                  Denah
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Amarilys%2036/72."
+                  target="_blank" rel="noopener"
+                  class="flex-1 bg-batara-dark hover:bg-batara-lime hover:text-batara-dark text-white font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center shadow-xs">
+                  Tanya Unit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Amarilys Plus -->
+          <div data-category="komersil"
+            class="house-card bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md border border-gray-100 flex flex-col text-batara-dark transition-all duration-300">
+            <div class="relative overflow-hidden bg-gray-50 p-2 sm:p-2.5">
+              <img src="assets/images/house-amarilys-plus.jpg" alt="Rumah Tipe Amarilys Plus Batara Parkview"
+                class="w-full h-[220px] sm:h-[235px] object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500">
+              <span
+                class="absolute top-4 left-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-3 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe Terluas
+              </span>
+              <span
+                class="absolute top-4 right-4 bg-batara-dark/85 text-white font-poppins text-xs font-medium px-2.5 py-1 rounded-full shadow-xs backdrop-blur-xs">
+                Tipe 30/60
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-baseline justify-between mb-3">
+                  <h3 class="font-syne font-bold text-2xl text-batara-dark">
+                    Amarilys Plus
+                  </h3>
+                  <span class="text-xs font-semibold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md">
+                    Premium Exclusive
+                  </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs font-poppins mb-4">
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Carport 2 Mobil
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Ruang Keluarga Luas
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    2 Kamar Besar
+                  </span>
+                  <span class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium">
+                    Dapur Modern
+                  </span>
+                  <span
+                    class="bg-[#f7faf8] text-gray-700 border border-gray-100 px-2.5 py-1.5 rounded-lg font-medium col-span-2">
+                    Tanah 84m² Sisa Lahan Luas
+                  </span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] text-gray-400 block font-medium">Harga Mulai</span>
+                    <span class="text-base font-syne font-bold text-batara-dark">Rp 420 Juta</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[11px] text-amber-700 block font-semibold">Cicilan Mulai</span>
+                    <span class="text-base font-syne font-bold text-amber-800">Rp 3.1 Jt<span
+                        class="text-xs font-normal">/bln</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-gray-100 flex items-center gap-2">
+                <button type="button"
+                  onclick="openDenahModal('assets/images/denah-amarilys.png', 'Amarilys Plus 30/60')"
+                  class="flex-1 bg-gray-100 hover:bg-gray-200 text-batara-dark font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center cursor-pointer">
+                  Denah
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20tertarik%20dengan%20Tipe%20Amarilys%20Plus%2045/84."
+                  target="_blank" rel="noopener"
+                  class="flex-1 bg-batara-dark hover:bg-batara-lime hover:text-batara-dark text-white font-syne font-semibold text-xs py-2.5 px-3 rounded-xl transition-all flex items-center justify-center shadow-xs">
+                  Tanya Unit
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Button to Tipe Rumah Page (Figma Vector) -->
+        <div class="mt-12 text-center">
+          <a href="tipe-rumah.html"
+            class="inline-flex items-center justify-center bg-white hover:bg-batara-lime hover:scale-105 transition-all duration-300 px-8 py-4 rounded-xl shadow-lg group">
+            <img src="assets/images/section3/Lihat SemuaType Rumah.svg" alt="Lihat Semua Type Rumah"
+              class="h-4 sm:h-4.5 w-auto object-contain">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SECTION ARTIKEL                         -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 lg:py-24 bg-[#f8faf8]" id="artikel">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16">
+
+        <div class="mb-10 sm:mb-14 text-center sm:text-left">
+          <h2 class="font-syne font-bold text-3xl sm:text-4xl lg:text-5xl text-batara-dark mb-2 tracking-tight">
+            Artikel
+          </h2>
+          <p class="font-poppins font-medium text-base sm:text-xl text-gray-600">
+            Temukan informasi terbaru seputar Batara Parkview
+          </p>
+        </div>
+
+        <!-- 3 Article Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Article 1: Ojol -->
+          <article
+            class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative h-56 sm:h-64 overflow-hidden bg-gray-100">
+              <img src="assets/section_images/HOME_PAGE-04_img_1.png" alt="Driver Ojol Punya Rumah di Batara Parkview"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-xs font-poppins font-semibold text-batara-limeDark uppercase tracking-wider">Kabar
+                  Komunitas</span>
+                <h3
+                  class="font-syne font-bold text-xl text-batara-dark mt-2 mb-3 leading-snug group-hover:text-batara-limeDark transition-colors">
+                  Hore! Kini driver ojol bisa punya rumah sendiri!
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 line-clamp-3 leading-relaxed">
+                  Program kemudahan subsidi KPR FLPP di Batara Parkview memudahkan para pejuang nafkah dan mitra
+                  pengemudi ojol untuk memiliki hunian impian hanya beberapa menit dari stasiun.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <a href="artikel-detail.html"
+                  class="text-batara-dark font-syne font-bold text-sm hover:text-batara-limeDark inline-flex items-center gap-1">
+                  Baca Selengkapnya &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: Golden Property Awards -->
+          <article
+            class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative h-56 sm:h-64 overflow-hidden bg-gray-100">
+              <img src="assets/section_images/HOME_PAGE-04_img_2.jpeg"
+                alt="Batara Parkview Raih Penghargaan Golden Property Awards"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span
+                  class="text-xs font-poppins font-semibold text-batara-limeDark uppercase tracking-wider">Prestasi</span>
+                <h3
+                  class="font-syne font-bold text-xl text-batara-dark mt-2 mb-3 leading-snug group-hover:text-batara-limeDark transition-colors">
+                  Batara Parkview mendapatkan penghargaan Golden Property Awards
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 line-clamp-3 leading-relaxed">
+                  Apresiasi atas komitmen tinggi Badak Perkasa Group dalam menghadirkan kawasan hunian berkonsep
+                  Transit-Oriented Development yang hijau, mandiri, dan terjangkau.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <a href="artikel.html"
+                  class="text-batara-dark font-syne font-bold text-sm hover:text-batara-limeDark inline-flex items-center gap-1">
+                  Baca Selengkapnya &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Developing for People -->
+          <article
+            class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative h-56 sm:h-64 overflow-hidden bg-[#e8eeeb] flex items-center justify-center p-8">
+              <img src="assets/section_images/HOME_PAGE-04_img_3.png" alt="Badak Perkasa Group — Developing for People"
+                class="max-h-36 w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-xs font-poppins font-semibold text-batara-limeDark uppercase tracking-wider">Badak
+                  Perkasa Group</span>
+                <h3
+                  class="font-syne font-bold text-xl text-batara-dark mt-2 mb-3 leading-snug group-hover:text-batara-limeDark transition-colors">
+                  Batara Parkview, Hunian terjangkau persembahan Badak Perkasa Group
+                </h3>
+                <p class="text-sm font-poppins text-gray-600 line-clamp-3 leading-relaxed">
+                  Dengan filosofi <em>Developing for People</em>, kami membangun kawasan hunian terpadu yang bukan hanya
+                  sekadar bangunan, namun ekosistem bertumbuh bagi keluarga Indonesia.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <a href="artikel.html"
+                  class="text-batara-dark font-syne font-bold text-sm hover:text-batara-limeDark inline-flex items-center gap-1">
+                  Baca Selengkapnya &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Button to Artikel Page -->
+        <div class="mt-12 text-center">
+          <a href="artikel.html"
+            class="inline-block bg-batara-lime text-batara-dark font-syne font-bold text-base px-8 py-3.5 rounded-xl hover:bg-batara-dark hover:text-white transition-all shadow-md">
+            Lihat Semua Artikel
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. SECTION INFORMASI & PENJUALAN (LEADS)   -->
+    <!-- ========================================== -->
+    <section id="contact" class="relative overflow-visible">
+
+      <!-- Top Strip: Paper Texture from Figma Reference (where lady's head rises) -->
+      <div class="w-full h-28 sm:h-36 md:h-48 lg:h-60 bg-cover bg-center relative"
+        style="background-image: url('assets/images/section4/paper-texture.jpeg');">
+      </div>
+
+      <!-- Main Dark Green Container -->
+      <div class="bg-[#15311e] text-white relative">
+        <div
+          class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-20 relative">
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+            <!-- Left: Lead Capture Form (Figma Section 4 Assets) -->
+            <div class="lg:col-span-7 xl:col-span-7 space-y-5 sm:space-y-6 relative z-10">
+              <!-- Vector Title & Subtitle from Figma -->
+              <div class="space-y-2.5 sm:space-y-3">
+                <div>
+                  <img src="assets/images/section4/Informasi & Penjualan.svg" alt="Informasi & Penjualan"
+                    class="h-7 sm:h-9 md:h-11 lg:h-[44px] w-auto object-contain">
+                  <h2 class="sr-only">Informasi & Penjualan</h2>
+                </div>
+                <div>
+                  <img src="assets/images/section4/Butuh brosur atau informasi lain_.svg"
+                    alt="Butuh brosur atau informasi lain?" class="h-4 sm:h-5 md:h-6 w-auto object-contain opacity-95">
+                  <p class="sr-only">Butuh brosur atau informasi lain? Tim kami siap membantu Anda.</p>
+                </div>
+              </div>
+
+              <!-- Form with Figma Labels, Inputs & Button -->
+              <form id="homeLeadForm" onsubmit="handleLeadSubmit(event)" class="space-y-5 pt-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <!-- Nama Lengkap Field -->
+                  <div>
+                    <label for="leadName" class="block mb-2">
+                      <img src="assets/images/section4/Nama Lengkap.svg" alt="Nama Lengkap"
+                        class="h-3.5 sm:h-4 md:h-[18px] w-auto object-contain">
+                      <span class="sr-only">Nama Lengkap</span>
+                    </label>
+                    <input type="text" id="leadName" name="nama" required placeholder="Nama Lengkap"
+                      class="w-full px-5 py-3.5 sm:py-4 rounded-[6.2px] bg-white text-batara-dark font-poppins placeholder-[#b3b3b3] text-base focus:outline-none focus:ring-2 focus:ring-[#86cf5e] shadow-sm transition-all">
+                  </div>
+                  <!-- Nomor Telepon Field -->
+                  <div>
+                    <label for="leadPhone" class="block mb-2">
+                      <img src="assets/images/section4/Nomor Telepon.svg" alt="Nomor Telepon"
+                        class="h-3.5 sm:h-4 md:h-[18px] w-auto object-contain">
+                      <span class="sr-only">Nomor Telepon</span>
+                    </label>
+                    <input type="tel" id="leadPhone" name="telepon" required placeholder="Nomor Telepon"
+                      class="w-full px-5 py-3.5 sm:py-4 rounded-[6.2px] bg-white text-batara-dark font-poppins placeholder-[#b3b3b3] text-base focus:outline-none focus:ring-2 focus:ring-[#86cf5e] shadow-sm transition-all">
+                  </div>
+                </div>
+
+                <!-- Submit Button Vector from Figma -->
+                <div class="pt-1">
+                  <button type="submit"
+                    class="w-full bg-[#86cf5e] hover:bg-[#78c250] hover:scale-[1.01] active:scale-[0.99] h-[54px] sm:h-[62px] rounded-[6.2px] flex items-center justify-center transition-all duration-200 shadow-lg group">
+                    <img src="assets/images/section4/AMBIL BROSUR!.svg" alt="AMBIL BROSUR!"
+                      class="h-4 sm:h-5 md:h-[22px] w-auto object-contain group-hover:scale-105 transition-transform duration-200">
+                    <span class="sr-only">AMBIL BROSUR!</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right: Spacing Column for Grid -->
+            <div class="hidden lg:block lg:col-span-5 xl:col-span-5"></div>
+          </div>
+
+          <!-- Desktop Customer Service Representative: Rising upwards out of green box into paper texture -->
+          <div
+            class="hidden lg:block absolute bottom-0 right-0 lg:right-2 xl:right-8 2xl:right-16 pointer-events-none z-20">
+            <img src="assets/images/section4/customer-service.png" alt="Customer Service Representative Batara Parkview"
+              class="w-auto h-[620px] lg:h-[700px] xl:h-[780px] max-w-none object-contain object-bottom drop-shadow-2xl">
+          </div>
+
+        </div>
+
+        <!-- Mobile / Tablet Representative Image -->
+        <div class="lg:hidden flex justify-center pb-8 px-4">
+          <img src="assets/images/section4/customer-service.png" alt="Customer Service Representative Batara Parkview"
+            class="w-full max-w-xs sm:max-w-sm h-auto object-contain drop-shadow-xl">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. SECTION LOKASI KAMI & KATA MEREKA       -->
+    <!-- ========================================== -->
+    <section class="py-14 sm:py-20 lg:py-24 bg-white" id="lokasi-kami">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 space-y-16 sm:space-y-20">
+
+        <!-- Part A: Lokasi Kami (Google Maps Embed) -->
+        <div>
+          <div class="mb-6 sm:mb-8">
+            <h2 class="font-syne font-bold text-3xl sm:text-4xl text-batara-dark">
+              Lokasi Kami
+            </h2>
+            <p class="font-poppins text-sm sm:text-base text-gray-500 mt-1">
+              Jl. Raya Cikoya, Cikasungka, Solear, Kab. Tangerang — Selangkah dari Stasiun Cikoya
+            </p>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-gray-200">
+            <iframe src="https://www.google.com/maps?q=Batara+Parkview+Cikoya+Tangerang&output=embed" width="100%"
+              height="400" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Lokasi Batara Parkview di Google Maps">
+            </iframe>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-poppins">Batara Parkview • Kab. Tangerang</span>
+            <a href="https://maps.google.com/?q=Batara+Parkview+Cikoya+Tangerang" target="_blank" rel="noopener"
+              class="text-xs font-poppins font-medium text-batara-dark hover:text-batara-lime transition-colors">
+              Buka di Google Maps →
+            </a>
+          </div>
+        </div>
+
+        <!-- Part B: Kata Mereka Tentang Batara Parkview -->
+        <div>
+          <div class="mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <h2 class="font-syne font-bold text-3xl sm:text-4xl text-batara-dark">
+                Kata Mereka Tentang Batara Parkview
+              </h2>
+              <p class="font-poppins text-sm sm:text-base text-gray-500 mt-1">
+                Ulasan nyata bintang 5 dari Google Maps
+              </p>
+            </div>
+            <!-- Google Maps Rating Badge -->
+            <a href="https://www.google.com/maps/search/Batara+Parkview+Cikoya+Tangerang/reviews" target="_blank"
+              rel="noopener"
+              class="flex-shrink-0 flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-gray-300 transition-colors group">
+              <!-- Google Logo -->
+              <svg width="20" height="20" viewBox="0 0 48 48" class="flex-shrink-0">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              <div>
+                <div class="flex items-center gap-1">
+                  <span class="font-syne font-bold text-batara-dark text-base leading-none">5.0</span>
+                  <span class="text-[#f59e0b] text-sm">★★★★★</span>
+                </div>
+                <span class="font-poppins text-xs text-gray-400">Lihat ulasan di Google Maps</span>
+              </div>
+              <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 transition-colors" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- 6 Testimonial Cards from Google Maps -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+            <!-- Card 1: Ahmad Puji -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">10 bulan lalu</span>
+                  </div>
+                  <!-- Google logo badge -->
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-ahmad-puji.jpg"
+                    alt="Serah terima kunci rumah Batara Parkview - Ahmad Puji"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "Perumahan strategis dekat stasiun, Lingkungan masih asri, pengurusan berkas mudah di bantu sama Bu
+                  intann sampai selesai serah Terima kunci... 😇"
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#2e7d32] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  A
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">Ahmad Puji</p>
+                  <p class="font-poppins text-xs text-gray-400">Warga Batara Parkview • Google Review</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Arief Ahsan -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">9 bulan lalu</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-arief-ahsan.jpg"
+                    alt="Suasana senja Batara Parkview - Arief Ahsan"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "Alhamdulillah sudah menjadi warga di Perumahan Batara Park View, terima kasih juga untuk sales Mb
+                  Intan karena sudah bantu proses pengajuan KPR dan domisili sementara saya, semoga ke depannya warga
+                  Batara semakin bertumbuh terutama di lingkungan Blok K."
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#7b1fa2] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  A
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">Arief Ahsan</p>
+                  <p class="font-poppins text-xs text-gray-400">Local Guide • Warga Blok K</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Riyo Yono -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">3 tahun lalu</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-riyo-yono.jpg"
+                    alt="Keluarga Riyo Yono serah terima kunci Batara Parkview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "Alhamdulillah n makasih banyak ke mba Intan selaku marketing di perumahan BATARA PARKVIEW yang selalu
+                  ada n support banget dalam membantu kami dalam mencari rumah impian dan akhirnya sampai lolos akad
+                  serta memiliki rumah idaman sendiri di BPV. Recomended banget punya hunian nyaman n aman serta lokasi
+                  strategis selangkah ke stasiun Cikoya."
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#0288d1] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  R
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">Riyo Yono</p>
+                  <p class="font-poppins text-xs text-gray-400">Warga Batara Parkview • Google Review</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Ibu A -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">3 tahun lalu</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-ibu-a.jpg"
+                    alt="Keluarga serah terima kunci Batara Parkview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "Akhir tahun 2022 BI checking, awal tahun 2023 Full booking, Proses, bulan Mei Akad, Finally Juli
+                  serah terima kunci.. walau sempat banyak rintangan & drama terutama nyicil DP😅, tp Bu INTAN KAMILA
+                  T.O.P B.G.T daaaahh...sangat membantu..👍 Marketing terbaik!"
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#1976d2] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  A
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">Ibu A</p>
+                  <p class="font-poppins text-xs text-gray-400">Local Guide • Warga Batara Parkview</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: M Hamdani -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">10 bulan lalu</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-m-hamdani.jpg"
+                    alt="Deretan rumah Batara Parkview - M Hamdani"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "Mbak Intan Best marketing. Belum sebulan proses berkas langsung beres dan sudah langsung akad. TOP
+                  pokoknya untuk Batara Parkview!"
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#00897b] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  M
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">M Hamdani</p>
+                  <p class="font-poppins text-xs text-gray-400">Warga Batara Parkview • Google Review</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Ketut Asti -->
+            <div
+              class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-100 flex flex-col justify-between gap-5 shadow-xs hover:shadow-md transition-all duration-300">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[#f59e0b] text-base tracking-tight">★★★★★</span>
+                    <span class="text-xs text-gray-400 font-poppins font-medium ml-1">3 tahun lalu</span>
+                  </div>
+                  <div class="flex items-center gap-1 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">
+                    <svg width="14" height="14" viewBox="0 0 48 48">
+                      <path fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                      <path fill="#4285F4"
+                        d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                      <path fill="#FBBC05"
+                        d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                      <path fill="#34A853"
+                        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                    </svg>
+                    <span class="text-[10px] text-gray-500 font-poppins font-semibold">Google</span>
+                  </div>
+                </div>
+
+                <!-- Customer Real Photo -->
+                <div class="rounded-xl overflow-hidden h-48 w-full bg-gray-50 border border-gray-100 group">
+                  <img src="assets/images/testimony/testimony-ketut-asti.jpg"
+                    alt="Keluarga Ketut Asti serah terima rumah Batara Parkview"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+
+                <blockquote class="font-poppins text-gray-700 text-sm leading-relaxed">
+                  "The best pokoknya perumahan Batara Parkview pilihan terbaik untuk masa depan, cuma 4 bulan proses nya
+                  dari survey smpe akad kredit, akhir bulan Oktober baru survey² rumah disna dgn bu intan bagian
+                  marketing nya dan bulan februari awal 2023 sudah serah terima kunci."
+                </blockquote>
+              </div>
+
+              <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#8d6e63] text-white font-syne font-bold flex items-center justify-center text-sm flex-shrink-0 shadow-xs">
+                  K
+                </div>
+                <div>
+                  <p class="font-syne font-bold text-sm text-batara-dark">Ketut Asti</p>
+                  <p class="font-poppins text-xs text-gray-400">Warga Batara Parkview • Google Review</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. SECTION PROMO & MEDIA SOSIAL            -->
+    <!-- ========================================== -->
+    <section class="py-12 sm:py-16 bg-[#384e40] text-white text-center">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 space-y-4">
+        <h2 class="font-syne font-bold text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
+          Dapatkan Informasi dan Promo Terbaru!
+        </h2>
+        <p class="font-poppins text-sm sm:text-base text-gray-200">
+          Ikuti & pantau terus media sosial kami
+        </p>
+
+        <!-- Social Media Icons (Facebook, Instagram, TikTok) -->
+        <div class="flex justify-center items-center gap-5 pt-4">
+          <!-- Facebook -->
+          <a href="https://facebook.com/bataraparkview" target="_blank" rel="noopener"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-batara-lime hover:text-batara-dark flex items-center justify-center transition-all shadow-md"
+            aria-label="Facebook Batara Parkview">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com/bataraparkview" target="_blank" rel="noopener"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-batara-lime hover:text-batara-dark flex items-center justify-center transition-all shadow-md"
+            aria-label="Instagram @bataraparkview">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://tiktok.com/@bataraparkview" target="_blank" rel="noopener"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-batara-lime hover:text-batara-dark flex items-center justify-center transition-all shadow-md"
+            aria-label="TikTok @bataraparkview">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. SECTION 3 OFFICE ADDRESSES              -->
+    <!-- ========================================== -->
+    <section class="py-12 sm:py-16 bg-[#f4f7f5] border-t border-gray-100">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+
+          <!-- Office 1: Marketing Gallery -->
+          <div class="bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-gray-100 space-y-2.5">
+            <h3 class="font-syne font-bold text-xl text-batara-limeDark flex items-center gap-2">
+              Marketing Gallery
+            </h3>
+            <p class="font-poppins text-sm text-gray-700 leading-relaxed">
+              Jl. Raya Cikoya, Cikasungka Kecamatan Solear,<br>
+              Kabupaten Tangerang, Banten 15730.
+            </p>
+          </div>
+
+          <!-- Office 2: Head Office -->
+          <div class="bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-gray-100 space-y-2.5">
+            <h3 class="font-syne font-bold text-xl text-batara-limeDark flex items-center gap-2">
+              Head Office
+            </h3>
+            <p class="font-poppins text-sm text-gray-700 leading-relaxed">
+              Jl. Raya Tigaraksa Cisoka, Tigaraksa,<br>
+              Kabupaten Tangerang, banten 15720
+            </p>
+          </div>
+
+          <!-- Office 3: Representatif Office -->
+          <div class="bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-gray-100 space-y-2.5">
+            <h3 class="font-syne font-bold text-xl text-batara-limeDark flex items-center gap-2">
+              Representatif Office
+            </h3>
+            <p class="font-poppins text-sm text-gray-700 leading-relaxed">
+              Ruko Northridge Business Center, Jl. Komplek Blok A1 No 1-2, Lengkong Wetan, Kec. Serpong, Tangerang
+              Selatan, Banten
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. SECTION COPYRIGHT BAR                   -->
+    <!-- ========================================== -->
+    <footer class="bg-white py-6 border-t border-gray-200">
+      <div
+        class="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 text-center sm:text-right font-poppins text-xs sm:text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <span class="font-syne font-semibold text-batara-dark">Copyright &copy; 2026 Batara Parkview</span>
+        <span>All right Reserved. Powered by Marcomm Badak Perkasa Group</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP INTERACTIVE WIDGET       -->
+  <!-- ========================================== -->
+  <div
+    class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-none select-none">
+
+    <!-- WhatsApp Popover Chat Window -->
+    <div id="waPopover"
+      class="wa-hidden pointer-events-auto w-[calc(100vw-2rem)] max-w-[340px] sm:max-w-[360px] mb-3 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-emerald-100 overflow-hidden">
+
+      <!-- Popover Header -->
+      <div
+        class="bg-gradient-to-r from-[#128C7E] to-[#075E54] text-white p-4 relative flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <!-- Avatar with Online Dot -->
+          <div
+            class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white/90 shadow-md bg-white flex-shrink-0">
+            <img src="assets/images/section4/customer-service.png" alt="Customer Service Representative"
+              class="w-full h-full object-cover object-top">
+            <span class="w-3 h-3 bg-emerald-400 border-2 border-white rounded-full absolute bottom-0 right-0"></span>
+          </div>
+          <div>
+            <h4 class="font-syne font-bold text-sm tracking-wide text-white leading-tight">
+              Marketing Batara Parkview
+            </h4>
+            <p class="font-poppins text-xs text-emerald-100 flex items-center gap-1.5 mt-0.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse inline-block"></span>
+              Online • Balas &lt; 5 menit
+            </p>
+          </div>
+        </div>
+        <!-- Close button -->
+        <button id="waClosePopover" type="button" aria-label="Tutup Chat"
+          class="p-1.5 rounded-full hover:bg-white/20 text-white/90 hover:text-white transition-colors cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Popover Body -->
+      <div class="p-4 bg-[#f8faf8] space-y-3 font-poppins">
+        <!-- Agent Greeting Bubble -->
+        <div
+          class="bg-white rounded-2xl rounded-tl-sm p-3.5 shadow-sm border border-gray-100 text-xs sm:text-sm text-gray-700 leading-relaxed">
+          <p class="font-medium text-batara-dark">
+            Halo! 👋 Selamat datang di Batara Parkview.
+          </p>
+          <p class="mt-1 text-gray-600 text-xs sm:text-[13px]">
+            Ada yang bisa kami bantu seputar unit, promo DP 0%, atau simulasi cicilan? Pilih topik di bawah:
+          </p>
+          <span class="text-[10px] text-gray-400 text-right mt-1.5 block font-medium">Baru saja</span>
+        </div>
+
+        <!-- Quick Action Shortcut Cards -->
+        <div class="space-y-2 pt-1">
+          <!-- Option 1: Brosur & Price List -->
+          <button type="button" onclick="sendWaMessage('brosur')"
+            class="w-full text-left bg-white hover:bg-emerald-50/70 border border-gray-200/80 hover:border-emerald-300 p-2.5 sm:p-3 rounded-xl transition-all shadow-xs flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <span
+                class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <span
+                  class="block font-syne font-bold text-xs sm:text-[13px] text-batara-dark group-hover:text-emerald-700">
+                  Minta E-Brosur &amp; Pricelist
+                </span>
+                <span class="block text-[11px] text-gray-500 font-poppins">
+                  PDF spesifikasi &amp; denah unit
+                </span>
+              </div>
+            </div>
+            <svg
+              class="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Option 2: Promo DP 0% & KPR -->
+          <button type="button" onclick="sendWaMessage('promo')"
+            class="w-full text-left bg-white hover:bg-emerald-50/70 border border-gray-200/80 hover:border-emerald-300 p-2.5 sm:p-3 rounded-xl transition-all shadow-xs flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <span
+                  class="block font-syne font-bold text-xs sm:text-[13px] text-batara-dark group-hover:text-emerald-700">
+                  Tanya Promo DP 0% &amp; Cicilan
+                </span>
+                <span class="block text-[11px] text-gray-500 font-poppins">
+                  Simulasi KPR mulai 1 jutaan/bln
+                </span>
+              </div>
+            </div>
+            <svg
+              class="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Option 3: Survey Lokasi -->
+          <button type="button" onclick="sendWaMessage('survey')"
+            class="w-full text-left bg-white hover:bg-emerald-50/70 border border-gray-200/80 hover:border-emerald-300 p-2.5 sm:p-3 rounded-xl transition-all shadow-xs flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-2.5">
+              <span
+                class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </span>
+              <div>
+                <span
+                  class="block font-syne font-bold text-xs sm:text-[13px] text-batara-dark group-hover:text-emerald-700">
+                  Jadwalkan Survey Lokasi
+                </span>
+                <span class="block text-[11px] text-gray-500 font-poppins">
+                  Cukup jalan kaki ke Stasiun Cikoya
+                </span>
+              </div>
+            </div>
+            <svg
+              class="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Direct Main WhatsApp CTA -->
+        <div class="pt-2">
+          <button type="button" onclick="sendWaMessage('default')"
+            class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-syne font-bold text-xs sm:text-sm py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group cursor-pointer">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span>Mulai Chat Sekarang</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Floating Button Trigger (Pill on Desktop, Compact on Mobile) -->
+    <button id="waFloatingBtn" type="button" aria-expanded="false"
+      aria-label="Buka Chat WhatsApp Marketing Batara Parkview"
+      class="pointer-events-auto relative group cursor-pointer wa-pulse-glow wa-floating-btn bg-gradient-to-r from-[#25D366] via-[#1ebd5a] to-[#128C7E] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 border-2 border-white/30 backdrop-blur-sm">
+
+      <!-- Unread Notification Badge -->
+      <span id="waBadge"
+        class="absolute -top-1.5 -right-1.5 bg-red-500 text-white font-poppins font-bold text-[10px] sm:text-[11px] w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-bounce ring-2 ring-white">
+        1
+      </span>
+
+      <!-- WhatsApp SVG Icon -->
+      <svg
+        class="w-7 h-7 sm:w-7 sm:h-7 fill-current flex-shrink-0 drop-shadow-sm group-hover:rotate-6 transition-transform"
+        viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+
+      <!-- Label Details (Expanded on Desktop, Clean on Mobile) -->
+      <div class="hidden sm:flex flex-col text-left leading-tight font-poppins pr-0.5">
+        <span class="font-syne font-bold text-sm text-white tracking-wide">Chat Marketing</span>
+        <span class="text-[11px] text-emerald-100 flex items-center gap-1 font-medium mt-0.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse inline-block"></span>
+          Online • Tanya Promo
+        </span>
+      </div>
+    </button>
+
+  </div>
+
+  <!-- MODAL: BROCHURE CONFIRMATION -->
+  <div id="brochureModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl text-center space-y-4">
+      <div
+        class="w-16 h-16 bg-batara-lime/20 text-batara-dark rounded-full flex items-center justify-center mx-auto text-3xl">
+        ✓
+      </div>
+      <h3 class="font-syne font-bold text-2xl text-batara-dark">
+        Terima Kasih, <span id="modalClientName">Teman Batara</span>!
+      </h3>
+      <p class="text-sm text-gray-600 font-poppins leading-relaxed">
+        Permintaan brosur digital Anda telah kami terima. Tim Marketing Batara Parkview akan segera menghubungi Anda
+        dengan informasi lengkap unit dan simulasi angsuran.
+      </p>
+      <div class="pt-2 flex flex-col gap-2">
+        <a id="modalWaBtn" href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+          class="btn-accent w-full text-center py-3">
+          Chat WhatsApp Marketing Langsung
+        </a>
+        <button id="closeBrochureModal" class="btn-primary w-full py-3"
+          onclick="document.getElementById('brochureModal').classList.add('hidden')">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PROMO SPESIAL BULAN INI (Minimalist & Elegant, matching screenshot design) -->
+  <div id="monthlyPromoModal"
+    class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl relative space-y-4 my-auto">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between border-b pb-3 border-gray-100">
+        <h3 id="promoTitle" class="font-syne font-bold text-lg sm:text-xl text-batara-dark">
+          Promo Spesial Batara Parkview
+        </h3>
+        <button type="button" onclick="closePromoModal(false)"
+          class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none cursor-pointer"
+          aria-label="Tutup Pop-up Promo">
+          ✕
+        </button>
+      </div>
+
+      <!-- Main Visual & Brief Info in soft container -->
+      <div
+        class="bg-gray-50 rounded-2xl p-3 flex flex-col items-center justify-center border border-gray-100 space-y-3">
+        <div class="w-full rounded-xl overflow-hidden shadow-sm bg-white">
+          <img id="promoBannerImg" src="assets/images/hero-banner-real.jpg" alt="Flyer Promo Batara Parkview"
+            class="w-full h-auto max-h-[260px] sm:max-h-[300px] object-cover block">
+        </div>
+
+        <!-- Minimalist Benefits Grid -->
+        <div class="w-full px-1">
+          <ul id="promoBenefitsList" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <!-- Diisi otomatis oleh main.js -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Action -->
+      <div class="flex items-center justify-between pt-1">
+        <span id="promoPeriodNote" class="text-xs text-gray-500 font-poppins">
+          Batara Parkview • Kuota Terbatas Bulan Ini
+        </span>
+        <button id="promoCtaBtn" type="button" onclick="claimMonthlyPromo()"
+          class="bg-batara-lime hover:bg-batara-limeDark text-batara-dark font-syne font-bold text-xs sm:text-sm py-2 px-5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+          <span class="cta-text">Klaim Promo via WA</span>
+        </button>
+      </div>
+
+      <!-- Subtle Dismiss Option -->
+      <div class="text-center pt-0.5">
+        <button type="button" onclick="closePromoModal(true)"
+          class="text-[11px] text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
+          Jangan tampilkan lagi bulan ini
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: LIGHTBOX DENAH RUMAH -->
+  <div id="denahModal"
+    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 shadow-2xl relative space-y-4">
+      <div class="flex items-center justify-between border-b pb-3 border-gray-100">
+        <h3 id="denahModalTitle" class="font-syne font-bold text-lg sm:text-xl text-batara-dark">
+          Denah Layout Rumah
+        </h3>
+        <button id="closeDenahModal" type="button"
+          class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none cursor-pointer">
+          ✕
+        </button>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-2 flex items-center justify-center max-h-[70vh] overflow-hidden">
+        <img id="denahModalImg" src="assets/images/denah-kalmia.jpg" alt="Denah Rumah Batara Parkview"
+          class="max-h-[60vh] w-auto object-contain rounded-xl">
+      </div>
+      <div class="flex items-center justify-between pt-2">
+        <span class="text-xs text-gray-500 font-poppins">Batara Parkview • Tata Ruang Nyaman & Maksimal</span>
+        <a id="denahWaBtn"
+          href="https://wa.me/6281234567890?text=Halo%20Marketing%20Batara%20Parkview,%20saya%20ingin%20konsultasi%20mengenai%20denah%20dan%20spesifikasi%20unit."
+          target="_blank" rel="noopener"
+          class="bg-batara-lime hover:bg-batara-limeDark text-batara-dark font-syne font-bold text-xs py-2 px-4 rounded-xl transition-all">
+          Tanya Denah via WA
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+
+      if (!name || !phone) {
+        alert('Silakan lengkapi Nama dan Nomor Telepon Anda.');
+        return;
+      }
+
+      document.getElementById('modalClientName').textContent = name;
+      const waText = encodeURIComponent(`Halo Marketing Batara Parkview, saya ${name} (${phone}). Saya tertarik dan ingin mendapatkan brosur digital serta informasi unit.`);
+      document.getElementById('modalWaBtn').href = `https://wa.me/6281234567890?text=${waText}`;
+
+      document.getElementById('brochureModal').classList.remove('hidden');
+
+      setTimeout(() => {
+        window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>

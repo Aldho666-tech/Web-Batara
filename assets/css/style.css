@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600;1,700;1,800&family=Syne:wght@500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #15311e;
+  --primary-forest: #14301e;
+  --secondary-color: #86cf5e;
+  --accent-lime: #86cf5e;
+  --accent-lime-hover: #75ba4f;
+  --background-color: #ffffff;
+  --surface-sage: #e8eeeb;
+  --neutral-light: #f1f1f1;
+  --neutral-soft: #f4f4f4;
+  --text-primary: #15311e;
+  --text-secondary: #384e40;
+  --text-muted: #97a099;
+  --border-color: #d8e2dc;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading, .font-syne {
+  font-family: var(--font-heading);
+}
+
+.font-poppins {
+  font-family: var(--font-body);
+}
+
+/* Smooth transition defaults */
+a, button {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #86cf5e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #15311e;
+}
+
+/* Navigation active pill */
+.nav-link {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #15311e;
+  position: relative;
+  padding: 0.35rem 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #15311e;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 3px;
+  background-color: #86cf5e;
+  border-radius: 2px;
+}
+
+/* Pill buttons */
+.btn-primary {
+  background-color: #15311e;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #15311e;
+}
+
+.btn-primary:hover {
+  background-color: #86cf5e;
+  color: #15311e;
+  border-color: #86cf5e;
+}
+
+.btn-accent {
+  background-color: #86cf5e;
+  color: #15311e;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-accent:hover {
+  background-color: #72b64d;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #15311e;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border: 2px solid #15311e;
+  border-radius: 9999px;
+  padding: 0.75rem 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline:hover {
+  background-color: #15311e;
+  color: #ffffff;
+}
+
+/* Lead Form telemarketing image positioning */
+.lead-form-section {
+  position: relative;
+  background-color: #15311e;
+  border-radius: 28px;
+  overflow: visible;
+}
+
+@media (min-width: 1024px) {
+  .cs-lady-container {
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    width: 38%;
+    max-width: 480px;
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+/* Spec table styling */
+.spec-table tr:nth-child(even) {
+  background-color: #f9fbf9;
+}
+.spec-table td {
+  padding: 0.45rem 0.6rem;
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+
+/* Amenity tag pills */
+.amenity-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: #ffffff;
+  color: #15311e;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+/* Card hover animation */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(21, 49, 30, 0.08);
+}
+
+/* Modal styles */
+.modal-overlay {
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  transition: transform 0.3s ease;
+}
+
+/* ========================================== */
+/* FLOATING WHATSAPP INTERACTIVE WIDGET       */
+/* ========================================== */
+@keyframes waPulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65), 0 10px 25px -5px rgba(21, 49, 30, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 10px 25px -5px rgba(21, 49, 30, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 10px 25px -5px rgba(21, 49, 30, 0.4);
+  }
+}
+
+.wa-pulse-glow {
+  animation: waPulseGlow 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes waFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.wa-floating-btn {
+  animation: waFloat 3.5s ease-in-out infinite;
+}
+
+.wa-floating-btn:hover {
+  animation-play-state: paused;
+}
+
+/* Popover smooth transition */
+#waPopover {
+  transform-origin: bottom right;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#waPopover.wa-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9) translateY(16px);
+  visibility: hidden;
+}
+
+#waPopover.wa-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
+  visibility: visible;
+}
+
+/* Promo Modal & Floating Trigger Animations */
+@keyframes promoModalEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.promo-modal-anim {
+  animation: promoModalEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.promo-floating-badge {
+  animation: waFloat 4s ease-in-out infinite;
+}
+
+/* House card filter transition */
+.house-card {
+  transition: all 0.35s ease;
+}
+
+.house-card.is-hidden {
+  display: none !important;
+}
+
+
